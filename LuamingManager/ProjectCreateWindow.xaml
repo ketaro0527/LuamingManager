@@ -1,0 +1,17 @@
+﻿<Window x:Class="LuamingManager.ProjectCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Create Project" Height="233" Width="461">
+    <Grid>
+        <Label Content="Project Name" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="project_name_label" VerticalAlignment="Top" />
+        <Label Content="Package Name" Height="28" HorizontalAlignment="Left" Margin="12,60,0,0" Name="package_name_label" VerticalAlignment="Top" />
+        <Label Content="Project Location" Height="28" HorizontalAlignment="Left" Margin="12,105,0,0" Name="label1" VerticalAlignment="Top" />
+        <extToolkit:WatermarkTextBox Watermark="Luaming" Margin="116,12,12,154" Name="project_name_textbox" />
+        <extToolkit:WatermarkTextBox Watermark="com.luaming.game" Margin="116,60,12,106" Name="package_name_textbox" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="116,105,0,0" Name="project_location_textbox" VerticalAlignment="Top" Width="239" IsReadOnly="True" />
+        <Button Content="Browse.." Height="23" HorizontalAlignment="Left" Margin="361,108,0,0" Name="browse_button" VerticalAlignment="Top" Width="66" Click="browse_button_Click" />
+        <Button Content="Create Project" Height="23" HorizontalAlignment="Left" Margin="12,159,0,0" Name="create_project_button" VerticalAlignment="Top" Width="200" Click="create_project_button_Click" IsEnabled="False" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="227,159,0,0" Name="cancel_button" VerticalAlignment="Top" Width="200" Click="cancel_button_Click" />
+    </Grid>
+</Window>

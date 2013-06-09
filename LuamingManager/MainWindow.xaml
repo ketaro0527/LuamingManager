@@ -1,0 +1,13 @@
+﻿<Window x:Class="LuamingManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LuamingManager" Height="165" Width="522">
+    <Grid>
+        <Button Content="Create Project" Height="23" HorizontalAlignment="Left" Margin="361,12,0,0" Name="create_button" VerticalAlignment="Top" Width="130" Click="create_button_Click" />
+        <Button Content="Load Project" Height="23" HorizontalAlignment="Left" Margin="361,53,0,0" Name="load_button" VerticalAlignment="Top" Width="130" Click="load_button_Click" />
+        <Button Content="Simulate" Height="23" HorizontalAlignment="Left" Margin="225,91,0,0" Name="simulate_button" VerticalAlignment="Top" Width="130" Click="simulate_button_Click" IsEnabled="False" />
+        <Button Content="Export" Height="23" HorizontalAlignment="Left" Margin="361,91,0,0" Name="export_button" VerticalAlignment="Top" Width="130" Click="export_button_Click" IsEnabled="False" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,53,0,0" Name="project_path_textbox" VerticalAlignment="Top" Width="343" IsReadOnly="True" />
+        <Label Content="" Height="36" HorizontalAlignment="Left" Margin="12,6,0,0" Name="project_name_label" VerticalAlignment="Top" Width="343" FontSize="15" FontWeight="Bold" />
+    </Grid>
+</Window>
