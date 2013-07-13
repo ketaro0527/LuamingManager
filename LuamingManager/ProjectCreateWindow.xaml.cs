@@ -112,6 +112,14 @@ namespace LuamingManager
             dstPath += @"\" + projectName;
             copyAll(srcPath, dstPath);
 
+            if (isLandscape)
+                File.Delete(dstPath + @"\assets\main_portrait.lua");
+            else
+            {
+                File.Delete(dstPath + @"\assets\main.lua");
+                File.Move(dstPath + @"\assets\main_portrait.lua", dstPath + @"\assets\main.lua");
+            }
+
             createProjectInformationFile();
         }
 

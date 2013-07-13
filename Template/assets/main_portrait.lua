@@ -16,10 +16,10 @@ local function main()
 		-- Set Frame Size
 		-- For Simulating in Windows
 		-- Remove or Annotate the below line when export the game
-		-- CCEGLView:sharedOpenGLView():setFrameSize(800, 480)
+		-- CCEGLView:sharedOpenGLView():setFrameSize(480, 800)
 
 		-- Set Design Resolution Size
-		CCEGLView:sharedOpenGLView():setDesignResolutionSize(800, 480, kResolutionShowAll)
+		CCEGLView:sharedOpenGLView():setDesignResolutionSize(480, 800, kResolutionShowAll)
 
 		-- Set FPS
 		CCDirector:sharedDirector():setAnimationInterval(1.0 / 60.0)

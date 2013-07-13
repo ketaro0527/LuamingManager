@@ -52,7 +52,7 @@ local function createLayerFarm()
 
 	-- add in farm background
 	local bg = CCSprite:create("farm.jpg")
-	bg:setPosition(origin.x + visibleSize.width / 2 + 80, origin.y + visibleSize.height / 2)
+	bg:setPosition(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2)
 	layerFarm:addChild(bg)
 
 	-- add land sprite
@@ -117,6 +117,24 @@ local function createLayerFarm()
 
 	layerFarm:registerScriptTouchHandler(onTouch)
 	layerFarm:setTouchEnabled(true)
+
+	local function onBackPressed()
+		CCDirector:sharedDirector():endToLua()
+	end
+
+	local function onMenuPressed()
+	end
+
+	local function onKeyEvent(eventType)
+		if eventType == "backClicked" then
+			return onBackPressed()
+		elseif eventType == "menuClicked" then
+			return onMenuPressed()
+		end
+	end
+
+	layerFarm:registerScriptKeypadHandler(onKeyEvent)
+	layerFarm:setKeypadEnabled(true)
 
 	return layerFarm
 end
