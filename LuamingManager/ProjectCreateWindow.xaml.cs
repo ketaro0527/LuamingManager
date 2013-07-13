@@ -35,6 +35,7 @@ namespace LuamingManager
         private string packageName;
         private bool isProjectNameValid;
         private bool isPackageValid;
+        private bool isLandscape = true;
 
         public ProjectCreateWindow()
         {
@@ -61,6 +62,8 @@ namespace LuamingManager
 
         private void create_project_button_Click(object sender, RoutedEventArgs e)
         {
+            isLandscape = (bool)radioLandscape.IsChecked;
+
             thread = new BackgroundWorker();
             thread.DoWork += new DoWorkEventHandler(thread_DoWork);
             thread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(thread_RunWorkerCompleted);
@@ -176,12 +179,18 @@ namespace LuamingManager
             JsonNumericValue versionCodeJson = new JsonNumericValue("VERSION_CODE");
             versionCodeJson.Value = 1;
             JsonStringValue mainScriptJson = new JsonStringValue("MAIN_SCRIPT");
-            mainScriptJson.Value = "hello.lua";
+            mainScriptJson.Value = "main.lua";
+            JsonStringValue orientationJson = new JsonStringValue("ORIENTATION");
+            if (isLandscape == true)
+                orientationJson.Value = "landscape";
+            else
+                orientationJson.Value = "portrait";
             luamingJson.Add(projectNameJson);
             luamingJson.Add(packageNameJson);
             luamingJson.Add(versionNameJson);
             luamingJson.Add(versionCodeJson);
             luamingJson.Add(mainScriptJson);
+            luamingJson.Add(orientationJson);
 
             StreamWriter sw = File.CreateText(dstPath + @"\assets\LuamingProject.json");
             sw.Write(luamingJson.ToString());
