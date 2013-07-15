@@ -13,9 +13,11 @@ local function main()
 		collectgarbage("setpause", 100)
 		collectgarbage("setstepmul", 5000)
 
-		-- Set Frame Size
-		-- For Simulating in Windows
-		-- Remove or Annotate the below line when export the game
+		--[[
+			Set Frame Size
+			For Simulating in Windows
+			Remove or Annotate the below line when export the game
+		--]]
 		-- CCEGLView:sharedOpenGLView():setFrameSize(800, 480)
 
 		-- Set Design Resolution Size

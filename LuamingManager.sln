@@ -3,16 +3,40 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuamingManager", "LuamingManager\LuamingManager.csproj", "{475DD1CA-C859-4402-9A86-259536E84023}"
 EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "LuamingManagerInstall", "LuamingManagerInstall\LuamingManagerInstall.isproj", "{FA238553-0341-48CE-A311-276E74342C1A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{475DD1CA-C859-4402-9A86-259536E84023} = {475DD1CA-C859-4402-9A86-259536E84023}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|x86 = CD_ROM|x86
 		Debug|x86 = Debug|x86
+		DVD-5|x86 = DVD-5|x86
 		Release|x86 = Release|x86
+		SingleImage|x86 = SingleImage|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{475DD1CA-C859-4402-9A86-259536E84023}.CD_ROM|x86.ActiveCfg = Release|x86
+		{475DD1CA-C859-4402-9A86-259536E84023}.CD_ROM|x86.Build.0 = Release|x86
 		{475DD1CA-C859-4402-9A86-259536E84023}.Debug|x86.ActiveCfg = Debug|x86
 		{475DD1CA-C859-4402-9A86-259536E84023}.Debug|x86.Build.0 = Debug|x86
+		{475DD1CA-C859-4402-9A86-259536E84023}.DVD-5|x86.ActiveCfg = Debug|x86
+		{475DD1CA-C859-4402-9A86-259536E84023}.DVD-5|x86.Build.0 = Debug|x86
 		{475DD1CA-C859-4402-9A86-259536E84023}.Release|x86.ActiveCfg = Release|x86
 		{475DD1CA-C859-4402-9A86-259536E84023}.Release|x86.Build.0 = Release|x86
+		{475DD1CA-C859-4402-9A86-259536E84023}.SingleImage|x86.ActiveCfg = Release|x86
+		{475DD1CA-C859-4402-9A86-259536E84023}.SingleImage|x86.Build.0 = Release|x86
+		{FA238553-0341-48CE-A311-276E74342C1A}.CD_ROM|x86.ActiveCfg = CD_ROM
+		{FA238553-0341-48CE-A311-276E74342C1A}.CD_ROM|x86.Build.0 = CD_ROM
+		{FA238553-0341-48CE-A311-276E74342C1A}.Debug|x86.ActiveCfg = SingleImage
+		{FA238553-0341-48CE-A311-276E74342C1A}.Debug|x86.Build.0 = SingleImage
+		{FA238553-0341-48CE-A311-276E74342C1A}.DVD-5|x86.ActiveCfg = DVD-5
+		{FA238553-0341-48CE-A311-276E74342C1A}.DVD-5|x86.Build.0 = DVD-5
+		{FA238553-0341-48CE-A311-276E74342C1A}.Release|x86.ActiveCfg = SingleImage
+		{FA238553-0341-48CE-A311-276E74342C1A}.Release|x86.Build.0 = SingleImage
+		{FA238553-0341-48CE-A311-276E74342C1A}.SingleImage|x86.ActiveCfg = SingleImage
+		{FA238553-0341-48CE-A311-276E74342C1A}.SingleImage|x86.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

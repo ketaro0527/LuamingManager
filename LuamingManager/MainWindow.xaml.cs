@@ -17,6 +17,7 @@ using System.ComponentModel;
 using System.Net.Json;
 using Ionic.Zip;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace LuamingManager
 {
@@ -68,25 +69,37 @@ namespace LuamingManager
 
         private void simulate_button_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start(System.Windows.Forms.Application.StartupPath + @"\Simulator\LuamingSimulator.exe", projectPath);
+            if (checkProjectValid())
+            {
+                string simulatorPath = System.Windows.Forms.Application.StartupPath;
+                if (getOrientation().Equals("landscape"))
+                    simulatorPath += @"\Simulator\LuamingSimulator.exe";
+                else
+                    simulatorPath += @"\Simulator\LuamingSimulator.Portrait.exe";
+
+                System.Diagnostics.Process.Start(simulatorPath, projectPath);
+            }
         }
 
         private void export_button_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Title = "Export Luaming Project";
-            sfd.DefaultExt = "apk";
-            sfd.Filter = "Luaming Application Package (*.apk)|*.apk";
-            sfd.CheckPathExists = true;
-            sfd.FileName = project_name_label.Content + ".apk";
-            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (checkProjectValid())
             {
-                exportPath = sfd.FileName;
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Title = "Export Luaming Project";
+                sfd.DefaultExt = "apk";
+                sfd.Filter = "Luaming Application Package (*.apk)|*.apk";
+                sfd.CheckPathExists = true;
+                sfd.FileName = project_name_label.Content + ".apk";
+                if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    exportPath = sfd.FileName;
 
-                thread = new BackgroundWorker();
-                thread.DoWork += new DoWorkEventHandler(thread_DoWork_Export);
-                thread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(thread_RunWorkerCompleted_Export);
-                thread.RunWorkerAsync();
+                    thread = new BackgroundWorker();
+                    thread.DoWork += new DoWorkEventHandler(thread_DoWork_Export);
+                    thread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(thread_RunWorkerCompleted_Export);
+                    thread.RunWorkerAsync();
+                }
             }
         }
 
@@ -99,6 +112,8 @@ namespace LuamingManager
                 project_path_textbox.Text = projectPath;
                 simulate_button.IsEnabled = true;
                 export_button.IsEnabled = true;
+                config_button.IsEnabled = true;
+                openproj_button.IsEnabled = true;
             }
         }
 
@@ -127,6 +142,8 @@ namespace LuamingManager
                     project_name_label.Content = System.IO.Path.GetFileName(projectPath);
                     simulate_button.IsEnabled = true;
                     export_button.IsEnabled = true;
+                    config_button.IsEnabled = true;
+                    openproj_button.IsEnabled = true;
                 }
                 else
                 {
@@ -163,6 +180,119 @@ namespace LuamingManager
             }
 
             zip.Save(exportPath);
+        }
+
+        private bool checkProjectValid()
+        {
+            string projectConfigPath = projectPath + @"\assets\LuamingProject.json";
+            if (!File.Exists(projectConfigPath))
+            {
+                System.Windows.MessageBox.Show("LuamingProject.json 파일이 없습니다!");
+                return false;
+            }
+            try
+            {
+                StreamReader sr = File.OpenText(projectConfigPath);
+                string config = sr.ReadToEnd();
+                sr.Close();
+
+                JsonTextParser jsonParser = new JsonTextParser();
+                JsonObjectCollection configObject = (JsonObjectCollection)jsonParser.Parse(config);
+                string projectName = configObject["PROJECT_NAME"].GetValue().ToString();
+                if (!Regex.IsMatch(projectName, @"^[a-zA-Z](\w?)+"))
+                {
+                    System.Windows.MessageBox.Show("LuamingProject.json: 프로젝트 이름이 올바르지 않습니다!");
+                    return false;
+                }
+                string packageName = configObject["PACKAGE_NAME"].GetValue().ToString();
+                if (!Regex.IsMatch(packageName, @"^[a-zA-Z]([a-zA-Z0-9_]?)+((\.[a-zA-Z0-9_]+)+)$"))
+                {
+                    System.Windows.MessageBox.Show("LuamingProject.json: 패키지 이름이 올바르지 않습니다!");
+                    return false;
+                }
+                string versionName = configObject["VERSION_NAME"].GetValue().ToString();
+                if (!Regex.IsMatch(versionName, @"^[1-9]([0-9]?)+((\.[0-9]+)+)$"))
+                {
+                    System.Windows.MessageBox.Show("LuamingProject.json: 버전 이름이 올바르지 않습니다!");
+                    return false;
+                }
+                if (!configObject["VERSION_CODE"].GetValue().GetType().ToString().Equals("System.Double"))
+                {
+                    System.Windows.MessageBox.Show("LuamingProject.json: 버전 코드가 올바르지 않습니다!");
+                    return false;
+                }
+                string mainScript = configObject["MAIN_SCRIPT"].GetValue().ToString();
+                if (!File.Exists(projectPath + @"\assets\" + mainScript))
+                {
+                    System.Windows.MessageBox.Show("LuamingProject.json: 메인 스크립트가 존재하지 않습니다!");
+                    return false;
+                }
+                string orientation = configObject["ORIENTATION"].GetValue().ToString().ToLower();
+                if (!orientation.Equals("landscape") && !orientation.Equals("portrait"))
+                {
+                    System.Windows.MessageBox.Show("LuamingProject.json: Orientation이 올바르지 않습니다!");
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                System.Windows.MessageBox.Show(e.ToString());
+                return false;
+            }
+            return true;
+        }
+
+        private string getOrientation()
+        {
+            string projectConfigPath = projectPath + @"\assets\LuamingProject.json";
+            string orientation = "landscape";
+            if (!File.Exists(projectConfigPath))
+            {
+                System.Windows.MessageBox.Show("LuamingProject.json 파일이 없습니다!");
+                return orientation;
+            }
+            try
+            {
+                StreamReader sr = File.OpenText(projectConfigPath);
+                string config = sr.ReadToEnd();
+                sr.Close();
+
+                JsonTextParser jsonParser = new JsonTextParser();
+                JsonObjectCollection configObject = (JsonObjectCollection)jsonParser.Parse(config);
+                orientation = configObject["ORIENTATION"].GetValue().ToString().ToLower();
+                if (!orientation.Equals("landscape") && !orientation.Equals("portrait"))
+                {
+                    return "landscape";
+                }
+            }
+            catch (Exception e)
+            {
+                System.Windows.MessageBox.Show(e.ToString());
+                return "landscape";
+            }
+            return orientation;
+        }
+
+        private void config_button_Click(object sender, RoutedEventArgs e)
+        {
+            string configFilePath = projectPath + @"\assets\LuamingProject.json";
+            if (!File.Exists(configFilePath))
+            {
+                System.Windows.MessageBox.Show(configFilePath + " 파일이 없습니다!");
+                return;
+            }
+            System.Diagnostics.Process.Start("notepad.exe", configFilePath);
+        }
+
+        private void openproj_button_Click(object sender, RoutedEventArgs e)
+        {
+            string assetsPath = projectPath + @"\assets";
+            if (!Directory.Exists(assetsPath))
+            {
+                System.Windows.MessageBox.Show(assetsPath + " 폴더가 없습니다!");
+                return;
+            }
+            System.Diagnostics.Process.Start("explorer.exe", assetsPath);
         }
     }
 }
