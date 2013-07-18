@@ -1,7 +1,7 @@
 ﻿<Window x:Class="LuamingManager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="LuamingManager" Height="241" Width="699" ResizeMode="CanMinimize" Background="#FF32394B" Foreground="{x:Null}" Icon="/LuamingManager;component/Images/app_button.ico" FontFamily="Tekton Pro" FontSize="16">
+        Title="LuamingManager" Height="295" Width="699" ResizeMode="CanMinimize" Background="#FF32394B" Foreground="{x:Null}" Icon="/LuamingManager;component/Images/app_button.ico" FontFamily="Tekton Pro" FontSize="16">
     <Grid>
         <Button Content="Create Project" Height="38" HorizontalAlignment="Right" Margin="0,26,12,0" Name="create_button" VerticalAlignment="Top" Width="149" Click="create_button_Click" Foreground="Black" FontFamily="Tekton Pro" FontSize="18" FocusVisualStyle="{x:Null}">
             <Button.BorderBrush>
@@ -19,7 +19,7 @@
                 <SolidColorBrush />
             </Button.BorderBrush>
         </Button>
-        <Button Content="Simulate" Height="38" HorizontalAlignment="Right" Margin="0,0,133,12" Name="simulate_button" VerticalAlignment="Bottom" Width="110" Click="simulate_button_Click" IsEnabled="False" FontFamily="Tekton Pro" FontSize="18" FocusVisualStyle="{x:Null}">
+        <Button Content="Simulate" Height="38" HorizontalAlignment="Right" Margin="0,0,11,73" Name="simulate_button" VerticalAlignment="Bottom" Width="150" Click="simulate_button_Click" IsEnabled="False" FontFamily="Tekton Pro" FontSize="18" FocusVisualStyle="{x:Null}">
             <Button.BorderBrush>
                 <SolidColorBrush />
             </Button.BorderBrush>
@@ -27,7 +27,7 @@
                 <ImageBrush ImageSource="/LuamingManager;component/Images/button_bg.png" />
             </Button.Background>
         </Button>
-        <Button Content="Export" Height="38" HorizontalAlignment="Right" Margin="0,0,11,12" Name="export_button" VerticalAlignment="Bottom" Width="110" Click="export_button_Click" IsEnabled="False" FontFamily="Tekton Pro" FontSize="18" FocusVisualStyle="{x:Null}">
+        <Button Content="Export" Height="38" HorizontalAlignment="Right" Margin="0,0,12,12" Name="export_button" VerticalAlignment="Bottom" Width="150" Click="export_button_Click" IsEnabled="False" FontFamily="Tekton Pro" FontSize="18" FocusVisualStyle="{x:Null}">
             <Button.BorderBrush>
                 <SolidColorBrush />
             </Button.BorderBrush>
@@ -46,7 +46,15 @@
             </Button.BorderBrush>
         </Button>
         <Image Height="121" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="121" Source="/LuamingManager;component/Images/logo.png" />
-        <Button Content="Open Project Folder" FocusVisualStyle="{x:Null}" FontFamily="Tekton Pro" FontSize="15" Height="38" HorizontalAlignment="Left" IsEnabled="False" Margin="160,0,0,12" Name="openproj_button" VerticalAlignment="Bottom" Width="140" Click="openproj_button_Click">
+        <Button Content="Open Project Folder" FocusVisualStyle="{x:Null}" FontFamily="Tekton Pro" FontSize="15" Height="38" HorizontalAlignment="Left" IsEnabled="False" Margin="12,0,0,73" Name="openproj_button" VerticalAlignment="Bottom" Width="140" Click="openproj_button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/LuamingManager;component/Images/button_bg.png" />
+            </Button.Background>
+            <Button.BorderBrush>
+                <SolidColorBrush />
+            </Button.BorderBrush>
+        </Button>
+        <Button Content="Edit Script" FocusVisualStyle="{x:Null}" FontFamily="Tekton Pro" FontSize="15" Height="38" HorizontalAlignment="Left" IsEnabled="False" Margin="168,0,0,12" Name="edit_script_button" VerticalAlignment="Bottom" Width="140" Click="edit_script_button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/LuamingManager;component/Images/button_bg.png" />
             </Button.Background>

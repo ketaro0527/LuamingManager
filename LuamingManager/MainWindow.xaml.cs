@@ -18,6 +18,7 @@ using System.Net.Json;
 using Ionic.Zip;
 using System.Threading;
 using System.Text.RegularExpressions;
+using Microsoft.Win32;
 
 namespace LuamingManager
 {
@@ -85,7 +86,7 @@ namespace LuamingManager
         {
             if (checkProjectValid())
             {
-                SaveFileDialog sfd = new SaveFileDialog();
+                System.Windows.Forms.SaveFileDialog sfd = new System.Windows.Forms.SaveFileDialog();
                 sfd.Title = "Export Luaming Project";
                 sfd.DefaultExt = "apk";
                 sfd.Filter = "Luaming Application Package (*.apk)|*.apk";
@@ -114,6 +115,7 @@ namespace LuamingManager
                 export_button.IsEnabled = true;
                 config_button.IsEnabled = true;
                 openproj_button.IsEnabled = true;
+                edit_script_button.IsEnabled = true;
             }
         }
 
@@ -144,6 +146,7 @@ namespace LuamingManager
                     export_button.IsEnabled = true;
                     config_button.IsEnabled = true;
                     openproj_button.IsEnabled = true;
+                    edit_script_button.IsEnabled = true;
                 }
                 else
                 {
@@ -293,6 +296,40 @@ namespace LuamingManager
                 return;
             }
             System.Diagnostics.Process.Start("explorer.exe", assetsPath);
+        }
+
+        private void edit_script_button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                RegistryKey reg = Registry.ClassesRoot;
+                reg = reg.CreateSubKey(@"Lua.Script\Shell\Edit\Command", RegistryKeyPermissionCheck.ReadSubTree);
+                string path = reg.GetValue("").ToString();
+                reg.Close();
+                if (path != null && path.Length > 0)
+                {
+                    char[] spliter = { '\"' };
+                    path = path.Split(spliter)[1];
+
+                    System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog();
+                    openFileDialog.Filter = "Lua Script Files (*.lua)|*.lua";
+                    openFileDialog.Title = "Select Lua Script File to edit";
+                    openFileDialog.InitialDirectory = projectPath + @"\assets";
+
+                    if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        System.Diagnostics.Process.Start(path, openFileDialog.FileName);
+                    }
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("Lua for Windows:SciTE를 설치해주세요!");
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                System.Windows.MessageBox.Show("Lua for Windows:SciTE를 설치해주세요!");
+            }
         }
     }
 }
