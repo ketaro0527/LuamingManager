@@ -19,6 +19,7 @@ using Ionic.Zip;
 using System.Threading;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
+using System.Windows.Threading;
 
 namespace LuamingManager
 {
@@ -32,7 +33,7 @@ namespace LuamingManager
 
         private BackgroundWorker thread;
         private ProgressDialog pd;
-
+        /*
         private delegate void UpdateValueLabel(System.Windows.Controls.Label label, string str);
         private delegate void UpdateValueTextBox(System.Windows.Controls.TextBox textbox, string str);
         private delegate void UpdateValueButton(System.Windows.Controls.Button button, bool enable);
@@ -51,11 +52,25 @@ namespace LuamingManager
         {
             button.IsEnabled = enable;
         }
-
+        */
         public MainWindow()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+            if (WindowStyle != WindowStyle.None)
+            {
+                Dispatcher.BeginInvoke(DispatcherPriority.ApplicationIdle, (DispatcherOperationCallback)delegate(object unused)
+                {
+                    WindowStyle = WindowStyle.None;
+                    return null;
+                }
+                , null);
+            }
         }
 
         private void create_button_Click(object sender, RoutedEventArgs e)
@@ -330,6 +345,27 @@ namespace LuamingManager
             {
                 System.Windows.MessageBox.Show("Lua for Windows:SciTE를 설치해주세요!");
             }
+        }
+
+        private void title_bar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void close_button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Close();
+        }
+
+        private void minimize_button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            WindowStyle = WindowStyle.SingleBorderWindow;
+            WindowState = WindowState.Minimized;
+        }
+
+        private void title_label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }
