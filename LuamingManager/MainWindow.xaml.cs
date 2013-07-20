@@ -30,6 +30,8 @@ namespace LuamingManager
     {
         public static string projectPath = null;
         private string exportPath;
+        private string lastBrowsingDataFile = System.Windows.Forms.Application.UserAppDataPath + @"\lastBrowsingPath.txt";
+        private string luamingReferenceURL = "http://210.118.74.97/LuamingReference/";
 
         private BackgroundWorker thread;
         private ProgressDialog pd;
@@ -124,6 +126,10 @@ namespace LuamingManager
             ProjectCreateWindow pcWindow = new ProjectCreateWindow();
             if (pcWindow.ShowDialog() == true)
             {
+                StreamWriter sw = File.CreateText(lastBrowsingDataFile);
+                sw.WriteLine(projectPath);
+                sw.Close();
+
                 project_name_label.Content = System.IO.Path.GetFileName(projectPath);
                 project_path_textbox.Text = projectPath;
                 simulate_button.IsEnabled = true;
@@ -148,9 +154,19 @@ namespace LuamingManager
         private void loadProject()
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
+            if (File.Exists(lastBrowsingDataFile)) {
+                StreamReader sr = File.OpenText(lastBrowsingDataFile);
+                string lastPath = sr.ReadToEnd();
+                sr.Close();
+                dialog.SelectedPath = lastPath.Trim() ;
+            }
+            
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string path = dialog.SelectedPath;
+                StreamWriter sw = File.CreateText(lastBrowsingDataFile);
+                sw.WriteLine(path);
+                sw.Close();
 
                 if (isValidProjectPath(path))
                 {
@@ -366,6 +382,32 @@ namespace LuamingManager
         private void title_label_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void reference_button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                RegistryKey reg = Registry.ClassesRoot;
+                reg = reg.CreateSubKey(@"ChromeHTML\shell\open\command", RegistryKeyPermissionCheck.ReadSubTree);
+                string path = reg.GetValue("").ToString();
+                reg.Close();
+                if (path != null && path.Length > 0)
+                {
+                    char[] spliter = { '\"' };
+                    path = path.Split(spliter)[1];
+
+                    System.Diagnostics.Process.Start(path, luamingReferenceURL);
+                }
+                else
+                {
+                    System.Diagnostics.Process.Start("explorer.exe", luamingReferenceURL);
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                System.Diagnostics.Process.Start("explorer.exe", luamingReferenceURL);
+            }
         }
     }
 }

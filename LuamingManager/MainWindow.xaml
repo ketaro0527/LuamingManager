@@ -44,8 +44,9 @@
             </Button.Background>
         </Button>
         <Image Height="34" HorizontalAlignment="Stretch" Name="title_bar" Stretch="Fill" VerticalAlignment="Top" Source="/LuamingManager;component/Images/window_bar.png" Margin="-10,0,-12,0" MouseLeftButtonDown="title_bar_MouseLeftButtonDown" />
-        <Label Content="Luaming Manager" Height="34" HorizontalAlignment="Left" Name="title_label" VerticalAlignment="Top" Width="144" FontSize="18" Margin="5,0,0,0" MouseLeftButtonDown="title_label_MouseLeftButtonDown" />
+        <Label Content="Luaming Manager" Height="34" HorizontalAlignment="Left" Name="title_label" VerticalAlignment="Top" Width="509" FontSize="18" Margin="5,0,0,0" MouseLeftButtonDown="title_label_MouseLeftButtonDown" />
         <Image Height="28" HorizontalAlignment="Right" Margin="0,3,5,0" Name="close_button" Stretch="Fill" VerticalAlignment="Top" Width="28" Source="/LuamingManager;component/Images/close.png" MouseLeftButtonDown="close_button_MouseLeftButtonDown" />
         <Image Height="28" HorizontalAlignment="Right" Margin="0,3,39,0" Name="minimize_button" Stretch="Fill" VerticalAlignment="Top" Width="28" Source="/LuamingManager;component/Images/minimize.png" MouseLeftButtonDown="minimize_button_MouseLeftButtonDown" />
+        <Image Height="28" HorizontalAlignment="Right" Margin="0,3,73,0" Name="reference_button" Stretch="Fill" VerticalAlignment="Top" Width="84" Source="/LuamingManager;component/Images/reference.png" MouseLeftButtonDown="reference_button_MouseLeftButtonDown" />
     </Grid>
 </Window>

@@ -1935,6 +1935,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>apidemo.lmg</td><td>ISX_DEFAULTCOMPONENT4</td><td>APIDemo.lmg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\APIDemo.lmg</td><td>1</td><td/></row>
 		<row><td>background.mp3</td><td>ISX_DEFAULTCOMPONENT2</td><td>BACKGR~1.MP3|background.mp3</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\background.mp3</td><td>1</td><td/></row>
 		<row><td>crop.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>crop.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\crop.png</td><td>1</td><td/></row>
 		<row><td>dog.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>dog.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\dog.png</td><td>1</td><td/></row>
@@ -2875,7 +2876,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1683893631</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1549706093</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
@@ -3980,8 +3981,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1683943295</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>-1683893535</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1683893631</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>-1549702700</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1549706093</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.exe</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1683943295</td></row>

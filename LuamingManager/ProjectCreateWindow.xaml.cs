@@ -16,6 +16,7 @@ using System.Threading;
 using System.Net.Json;
 using System.IO;
 using System.Text.RegularExpressions;
+using Ionic.Zip;
 
 namespace LuamingManager
 {
@@ -36,21 +37,35 @@ namespace LuamingManager
         private bool isProjectNameValid;
         private bool isPackageValid;
         private bool isLandscape = true;
+        private bool isDemoProject = false;
+        private bool createResult = true;
+
+        private string lastCreatingDataFile = System.Windows.Forms.Application.UserAppDataPath + @"\lastCreatingPath.txt";
 
         public ProjectCreateWindow()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-
-            project_name_textbox.KeyUp += new System.Windows.Input.KeyEventHandler(project_name_textbox_KeyUp);
-            package_name_textbox.KeyUp += new System.Windows.Input.KeyEventHandler(package_name_textbox_KeyUp);
         }
 
         private void browse_button_Click(object sender, RoutedEventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
+            if (File.Exists(lastCreatingDataFile))
+            {
+                StreamReader sr = File.OpenText(lastCreatingDataFile);
+                string lastPath = sr.ReadToEnd();
+                sr.Close();
+                dialog.SelectedPath = lastPath.Trim();
+            }
+
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
+                string path = dialog.SelectedPath;
+                StreamWriter sw = File.CreateText(lastCreatingDataFile);
+                sw.WriteLine(path);
+                sw.Close();
+
                 // Set path
                 srcPath = System.Windows.Forms.Application.StartupPath + @"\Template";
                 dstPath = dialog.SelectedPath;
@@ -62,35 +77,30 @@ namespace LuamingManager
 
         private void create_project_button_Click(object sender, RoutedEventArgs e)
         {
-            isLandscape = (bool)radioLandscape.IsChecked;
+            if (!Directory.Exists(dstPath + @"\" + project_name_textbox.Text))
+            {
+                dstPath += @"\" + project_name_textbox.Text;
+                isLandscape = (bool)radioLandscape.IsChecked;
+                isDemoProject = (bool)radioApiDemo.IsChecked;
 
-            thread = new BackgroundWorker();
-            thread.DoWork += new DoWorkEventHandler(thread_DoWork);
-            thread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(thread_RunWorkerCompleted);
-            thread.RunWorkerAsync();
+                thread = new BackgroundWorker();
+                thread.DoWork += new DoWorkEventHandler(thread_DoWork);
+                thread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(thread_RunWorkerCompleted);
+                thread.RunWorkerAsync();
 
-            pd = new ProgressDialog();
-            pd.Show();
+                pd = new ProgressDialog();
+                pd.Show();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("프로젝트 폴더가 이미 존재합니다!");
+            }
         }
 
         private void cancel_button_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
             this.Close();
-        }
-
-        private void project_name_textbox_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            projectName = project_name_textbox.Text;
-            isProjectNameValid = Regex.IsMatch(projectName, @"^[a-zA-Z](\w?)+");
-            setCreateButtonEnabled();
-        }
-
-        private void package_name_textbox_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            packageName = package_name_textbox.Text;
-            isPackageValid = Regex.IsMatch(packageName, @"^[a-zA-Z]([a-zA-Z0-9_]?)+((\.[a-zA-Z0-9_]+)+)$");
-            setCreateButtonEnabled();
         }
 
         private void setCreateButtonEnabled()
@@ -106,28 +116,71 @@ namespace LuamingManager
 
         private void thread_DoWork(object sender, DoWorkEventArgs e)
         {
-            maxFileCount = fileCount(srcPath);
-            currentFileCount = 0;
-            Thread.Sleep(100);
-            dstPath += @"\" + projectName;
-            copyAll(srcPath, dstPath);
+            if (isDemoProject)
+            {
+                string demoZipPath = System.Windows.Forms.Application.StartupPath + @"\APIDemo.lmg";
+                if (File.Exists(demoZipPath))
+                {
+                    ZipFile zip = new ZipFile(demoZipPath);
+                    if (Directory.Exists(dstPath + @"\APIDemo"))
+                    {
+                        createResult = false;
+                        return;
+                    }
+                    IEnumerator<ZipEntry> entries = zip.GetEnumerator();
 
-            if (isLandscape)
-                File.Delete(dstPath + @"\assets\main_portrait.lua");
+                    maxFileCount = 0;
+                    while (entries.MoveNext())
+                    {
+                        ZipEntry entry = entries.Current;
+                        maxFileCount++;
+                    }
+
+                    entries = zip.GetEnumerator();
+                    currentFileCount = 0;
+                    while (entries.MoveNext())
+                    {
+                        ZipEntry entry = entries.Current;
+                        entry.Extract(dstPath, ExtractExistingFileAction.OverwriteSilently);
+                        pd.UpdateProgress((double)(++currentFileCount) / (double)maxFileCount);
+                        pd.UpdateStatus(entry.FileName);
+                    }
+                }
+                else
+                {
+                    createResult = false;
+                }
+            }
             else
             {
-                File.Delete(dstPath + @"\assets\main.lua");
-                File.Move(dstPath + @"\assets\main_portrait.lua", dstPath + @"\assets\main.lua");
-            }
+                maxFileCount = fileCount(srcPath);
+                currentFileCount = 0;
+                Thread.Sleep(100);
+                //dstPath += @"\" + projectName;
+                if (Directory.Exists(dstPath))
+                {
+                    createResult = false;
+                    return;
+                }
+                copyAll(srcPath, dstPath);
 
-            createProjectInformationFile();
+                if (isLandscape)
+                    File.Delete(dstPath + @"\assets\main_portrait.lua");
+                else
+                {
+                    File.Delete(dstPath + @"\assets\main.lua");
+                    File.Move(dstPath + @"\assets\main_portrait.lua", dstPath + @"\assets\main.lua");
+                }
+
+                createProjectInformationFile();
+            }
         }
 
         private void thread_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             pd.Finish();
 
-            this.DialogResult = true;
+            this.DialogResult = createResult;
             MainWindow.projectPath = dstPath;
 
             this.Close();
@@ -171,6 +224,7 @@ namespace LuamingManager
                 File.Copy(file, dstFile, true);
                 currentFileCount++;
                 pd.UpdateProgress((double)(currentFileCount) / (double)maxFileCount);
+                pd.UpdateStatus(@"assets\" + fileName);
             }
         }
 
@@ -218,6 +272,52 @@ namespace LuamingManager
         private void image2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Close();
+        }
+
+        private void radioLuamingProject_Checked(object sender, RoutedEventArgs e)
+        {
+            project_name_textbox.Text = "";
+            project_name_textbox.IsEnabled = true;
+            isProjectNameValid = false;
+            package_name_textbox.Text = "";
+            package_name_textbox.IsEnabled = true;
+            isPackageValid = false;
+            radioLandscape.IsChecked = true;
+            radioPortrait.IsChecked = false;
+            radioLandscape.IsEnabled = true;
+            radioPortrait.IsEnabled = true;
+
+            setCreateButtonEnabled();
+        }
+
+        private void radioApiDemo_Checked(object sender, RoutedEventArgs e)
+        {
+            project_name_textbox.Text = "APIDemo";
+            project_name_textbox.IsEnabled = false;
+            isProjectNameValid = true;
+            package_name_textbox.Text = "com.luaming.demo";
+            package_name_textbox.IsEnabled = false;
+            isPackageValid = true;
+            radioLandscape.IsChecked = true;
+            radioPortrait.IsChecked = false;
+            radioLandscape.IsEnabled = false;
+            radioPortrait.IsEnabled = false;
+            
+            setCreateButtonEnabled();
+        }
+
+        private void project_name_textbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            projectName = project_name_textbox.Text;
+            isProjectNameValid = Regex.IsMatch(projectName, @"^[a-zA-Z](\w?)+");
+            setCreateButtonEnabled();
+        }
+
+        private void package_name_textbox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            packageName = package_name_textbox.Text;
+            isPackageValid = Regex.IsMatch(packageName, @"^[a-zA-Z]([a-zA-Z0-9_]?)+((\.[a-zA-Z0-9_]+)+)$");
+            setCreateButtonEnabled();
         }
     }
 }
