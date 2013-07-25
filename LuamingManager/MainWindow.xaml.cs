@@ -32,9 +32,13 @@ namespace LuamingManager
         private string exportPath;
         private string lastBrowsingDataFile = System.Windows.Forms.Application.UserAppDataPath + @"\lastBrowsingPath.txt";
         private string luamingReferenceURL = "http://210.118.74.97/LuamingReference/";
+        private string projectName = "";
 
         private BackgroundWorker thread;
         private ProgressDialog pd;
+
+        private int currentEntry = 0;
+        private int totalEntry = 0;
         /*
         private delegate void UpdateValueLabel(System.Windows.Controls.Label label, string str);
         private delegate void UpdateValueTextBox(System.Windows.Controls.TextBox textbox, string str);
@@ -112,11 +116,15 @@ namespace LuamingManager
                 if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     exportPath = sfd.FileName;
+                    projectName = project_name_label.Content.ToString();
 
                     thread = new BackgroundWorker();
                     thread.DoWork += new DoWorkEventHandler(thread_DoWork_Export);
                     thread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(thread_RunWorkerCompleted_Export);
                     thread.RunWorkerAsync();
+
+                    pd = new ProgressDialog();
+                    pd.Show();
                 }
             }
         }
@@ -147,7 +155,7 @@ namespace LuamingManager
 
         private void thread_RunWorkerCompleted_Export(object sender, RunWorkerCompletedEventArgs e)
         {
-            System.Windows.MessageBox.Show(project_name_label.Content + " is successfully exported!!");
+            System.Windows.MessageBox.Show(projectName + " is successfully exported!!");
         }
 
 
@@ -196,24 +204,70 @@ namespace LuamingManager
             return true;
         }
 
+        private void zip_AddProgress(object sender, AddProgressEventArgs e)
+        {
+            if (e.EventType == ZipProgressEventType.Adding_AfterAddEntry)
+            {
+                pd.UpdateProgress((double)(e.EntriesTotal) / (double)(totalEntry));
+                pd.UpdateStatus("Adding " + e.CurrentEntry.FileName);
+            }
+        }
+
+        private void zip_SaveProgress(object sender, SaveProgressEventArgs e)
+        {
+            if (e.EventType == ZipProgressEventType.Saving_Started)
+            {
+                currentEntry = 0;
+            }
+            else if (e.EventType == ZipProgressEventType.Saving_AfterWriteEntry)
+            {
+                pd.UpdateProgress((double)(++currentEntry) / (double)(totalEntry));
+                pd.UpdateStatus("Saving " + e.CurrentEntry.FileName);
+            }
+            else if (e.EventType == ZipProgressEventType.Saving_Completed)
+            {
+                Thread.Sleep(500);
+                pd.Finish();
+            }
+        }
+
         private void exportProject()
         {
             ZipFile zip = new ZipFile();
-            
+            zip.AddProgress += new EventHandler<AddProgressEventArgs>(zip_AddProgress);
+            zip.SaveProgress += new EventHandler<SaveProgressEventArgs>(zip_SaveProgress);
+
+            totalEntry = 0;
+            setTotalEntry(projectPath);
+
             string[] dirs = Directory.GetDirectories(projectPath);
+            string[] files = Directory.GetFiles(projectPath);
+            
             foreach (string dir in dirs)
             {
                 string dirName = System.IO.Path.GetFileName(dir);
                 zip.AddDirectory(dir, dirName);   
             }
             
-            string[] files = Directory.GetFiles(projectPath);
             foreach (string file in files)
             {
                 zip.AddFile(file, @"");
             }
 
             zip.Save(exportPath);
+        }
+
+        private void setTotalEntry(string path)
+        {
+            string[] dirs = Directory.GetDirectories(path);
+            string[] files = Directory.GetFiles(path);
+
+            totalEntry += dirs.Length + files.Length;
+
+            for (int i = 0; i < dirs.Length; i++)
+            {
+                setTotalEntry(dirs[i]);
+            }
         }
 
         private bool checkProjectValid()

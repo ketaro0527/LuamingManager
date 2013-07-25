@@ -340,30 +340,31 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td>{8EDE1B6E-E980-4D86-B98C-ADAB4EE484E0}</td><td>SIMULATOR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{9ACE1B5C-7914-488E-918F-FA4705A434C1}</td><td>TEMPLATE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{D8438965-1281-433A-8753-61D1D8145C94}</td><td>ASSETS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td>{6CD150A5-FB4E-4554-BCB8-A066B822032F}</td><td>SIMULATOR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{2D01A954-1462-45BD-A1A7-14479B0231E1}</td><td>TEMPLATE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{7318DCC0-BF6D-4B72-9686-1B171C4C505E}</td><td>ASSETS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{7CA581E4-2470-4EEF-8D63-CCD10EFE1609}</td><td>LUAFORWINDOWS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{E87CB636-275F-4F8C-938A-4802AB000032}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LuaForWindows_v5.1.4_46.exe1</td><td>{D99C681B-EFDD-488D-9532-30231E0DD380}</td><td>LUAFORWINDOWS</td><td>2</td><td/><td>luaforwindows_v5.1.4_46.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LuamingManager.Primary_output</td><td>{2530AA2B-9ABF-48FE-A366-6B014534CBCD}</td><td>INSTALLDIR</td><td>2</td><td/><td>luamingmanager.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LuamingSimulator.Portrait.exe</td><td>{2EFB3E1E-E435-4429-B6D3-00FCA4E4DA7E}</td><td>SIMULATOR</td><td>2</td><td/><td>luamingsimulator.portrait.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>LuamingSimulator.exe</td><td>{7C8524CE-6C7F-4F33-99FF-7C0C2B1E14C3}</td><td>SIMULATOR</td><td>2</td><td/><td>luamingsimulator.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LuamingManager.Primary_output</td><td>{CF323C0E-2BF3-4356-9004-8B4554F3B28D}</td><td>INSTALLDIR</td><td>2</td><td/><td>luamingmanager.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LuamingSimulator.Portrait.exe</td><td>{AD9AEB69-AA18-4B30-99E1-6962DEA1A9A3}</td><td>SIMULATOR</td><td>2</td><td/><td>luamingsimulator.portrait.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>LuamingSimulator.exe</td><td>{41B2F878-6CB1-450D-AD4E-DB9CA1C4C189}</td><td>SIMULATOR</td><td>2</td><td/><td>luamingsimulator.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{D875B9FA-274C-485F-8265-C92A23E6F2E5}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent2</td><td>{EE0C0519-14ED-4494-AAB0-5271EE4B1627}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent3</td><td>{5ED09FD1-033E-4D64-9A23-2C0D51B53A7E}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>glew32.dll</td><td>{902DF9FC-8679-449E-B221-E15019D4A155}</td><td>SIMULATOR</td><td>2</td><td/><td>glew32.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>iconv.dll</td><td>{7305638D-C772-490F-8799-2C191A99BAD2}</td><td>SIMULATOR</td><td>2</td><td/><td>iconv.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>libCocosDenshion.dll</td><td>{FADD36EF-22BA-404A-95D7-7EA284779A58}</td><td>SIMULATOR</td><td>2</td><td/><td>libcocosdenshion.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>libcocos2d.dll</td><td>{1B1D96A9-20BE-4153-8C23-36CF4DCB6675}</td><td>SIMULATOR</td><td>2</td><td/><td>libcocos2d.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>libcurl.dll</td><td>{39AF22EB-03DA-4F9B-A80B-773945E8A9A6}</td><td>SIMULATOR</td><td>2</td><td/><td>libcurl.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>libtiff.dll</td><td>{42839FE6-9F40-4336-BFE4-F63F0AB5EC50}</td><td>SIMULATOR</td><td>2</td><td/><td>libtiff.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>lua5.1.dll</td><td>{CB1F675C-1E4C-4F3A-81EE-3B8C278C821F}</td><td>INSTALLDIR</td><td>2</td><td/><td>lua5.1.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>lua51.dll</td><td>{000CAE2F-FA4E-42D3-8DF8-549F55F6B20D}</td><td>SIMULATOR</td><td>2</td><td/><td>lua51.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>mozjs.dll</td><td>{C6C2D189-0722-4610-9EB4-FD48DCED36C0}</td><td>SIMULATOR</td><td>2</td><td/><td>mozjs.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>pthreadVCE2.dll</td><td>{A28B942B-E2C3-4C8C-82B8-009C48AA7A80}</td><td>SIMULATOR</td><td>2</td><td/><td>pthreadvce2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>sqlite3.dll</td><td>{846CC62F-BC96-4CCD-8A10-6324CA056AF4}</td><td>SIMULATOR</td><td>2</td><td/><td>sqlite3.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>zlib1.dll</td><td>{52D30BE9-525B-4658-8674-ADA6A9DA7509}</td><td>SIMULATOR</td><td>2</td><td/><td>zlib1.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NewComponent4</td><td>{353F3896-50EF-4565-A038-FB028FCD1A1C}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>glew32.dll</td><td>{B19E0A99-9500-4E06-96F2-8C0857672B87}</td><td>SIMULATOR</td><td>2</td><td/><td>glew32.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>iconv.dll</td><td>{B071F833-679F-42AB-949F-75439F2281CC}</td><td>SIMULATOR</td><td>2</td><td/><td>iconv.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>libCocosDenshion.dll</td><td>{2DB5C686-C162-4717-A3F8-0BAA29DD2A0C}</td><td>SIMULATOR</td><td>2</td><td/><td>libcocosdenshion.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>libcocos2d.dll</td><td>{CAFCD69D-867E-4D15-9E37-51E5DD1501BB}</td><td>SIMULATOR</td><td>2</td><td/><td>libcocos2d.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>libcurl.dll</td><td>{EC0A5CC1-354A-42A7-B992-DDD32A19B69A}</td><td>SIMULATOR</td><td>2</td><td/><td>libcurl.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>libtiff.dll</td><td>{6B0AE34A-E2B8-4770-8D73-E4403EB0FB12}</td><td>SIMULATOR</td><td>2</td><td/><td>libtiff.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>lua5.1.dll</td><td>{96B32E45-8CB4-4D98-AA3B-4BF0F95F2F88}</td><td>INSTALLDIR</td><td>2</td><td/><td>lua5.1.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>lua51.dll</td><td>{4FD7B202-651E-4E7B-9D02-B031EBE80856}</td><td>SIMULATOR</td><td>2</td><td/><td>lua51.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>mozjs.dll</td><td>{594DA37A-A7C2-4116-9BC5-AC64DC7CF5C6}</td><td>SIMULATOR</td><td>2</td><td/><td>mozjs.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>pthreadVCE2.dll</td><td>{CFA63C64-13D6-4896-8561-4C56B5C69BD3}</td><td>SIMULATOR</td><td>2</td><td/><td>pthreadvce2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>sqlite3.dll</td><td>{8A267938-5BAE-494A-A986-27C8528D1641}</td><td>SIMULATOR</td><td>2</td><td/><td>sqlite3.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>zlib1.dll</td><td>{8E892F71-920A-444A-98D3-EA72D08696E6}</td><td>SIMULATOR</td><td>2</td><td/><td>zlib1.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1076,6 +1077,7 @@
 		<row><td>INSTALLDIR</td><td>NewComponent1</td></row>
 		<row><td>INSTALLDIR</td><td>NewComponent2</td></row>
 		<row><td>INSTALLDIR</td><td>NewComponent3</td></row>
+		<row><td>INSTALLDIR</td><td>NewComponent4</td></row>
 		<row><td>LUAFORWINDOWS</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>SIMULATOR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>TEMPLATE</td><td>ISX_DEFAULTCOMPONENT1</td></row>
@@ -1909,6 +1911,7 @@
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent2</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent3</td></row>
+		<row><td>AlwaysInstall</td><td>NewComponent4</td></row>
 		<row><td>AlwaysInstall</td><td>glew32.dll</td></row>
 		<row><td>AlwaysInstall</td><td>iconv.dll</td></row>
 		<row><td>AlwaysInstall</td><td>libCocosDenshion.dll</td></row>
@@ -1935,35 +1938,34 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>apidemo.lmg</td><td>ISX_DEFAULTCOMPONENT4</td><td>APIDemo.lmg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\APIDemo.lmg</td><td>1</td><td/></row>
-		<row><td>background.mp3</td><td>ISX_DEFAULTCOMPONENT2</td><td>BACKGR~1.MP3|background.mp3</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\background.mp3</td><td>1</td><td/></row>
-		<row><td>crop.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>crop.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\crop.png</td><td>1</td><td/></row>
-		<row><td>dog.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>dog.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\dog.png</td><td>1</td><td/></row>
-		<row><td>effect1.wav</td><td>ISX_DEFAULTCOMPONENT2</td><td>effect1.wav</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\effect1.wav</td><td>1</td><td/></row>
-		<row><td>farm.jpg</td><td>ISX_DEFAULTCOMPONENT2</td><td>farm.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\farm.jpg</td><td>1</td><td/></row>
-		<row><td>glew32.dll</td><td>glew32.dll</td><td>glew32.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\glew32.dll</td><td>1</td><td/></row>
-		<row><td>hello.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>hello.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\hello.lua</td><td>1</td><td/></row>
-		<row><td>iconv.dll</td><td>iconv.dll</td><td>iconv.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\iconv.dll</td><td>1</td><td/></row>
-		<row><td>land.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>land.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\land.png</td><td>1</td><td/></row>
-		<row><td>libcocos2d.dll</td><td>libcocos2d.dll</td><td>LIBCOC~1.DLL|libcocos2d.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\libcocos2d.dll</td><td>1</td><td/></row>
-		<row><td>libcocosdenshion.dll</td><td>libCocosDenshion.dll</td><td>LIBCOC~1.DLL|libCocosDenshion.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\libCocosDenshion.dll</td><td>1</td><td/></row>
-		<row><td>libcurl.dll</td><td>libcurl.dll</td><td>libcurl.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\libcurl.dll</td><td>1</td><td/></row>
-		<row><td>libtiff.dll</td><td>libtiff.dll</td><td>libtiff.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\libtiff.dll</td><td>1</td><td/></row>
-		<row><td>lua5.1.dll</td><td>lua5.1.dll</td><td>LUA51~1.DLL|lua5.1.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\lua5.1.dll</td><td>1</td><td/></row>
-		<row><td>lua51.dll</td><td>lua51.dll</td><td>lua51.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\lua51.dll</td><td>1</td><td/></row>
+		<row><td>apidemo.lmg</td><td>ISX_DEFAULTCOMPONENT4</td><td>APIDemo.lmg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\APIDemo.lmg</td><td>1</td><td/></row>
+		<row><td>background.mp3</td><td>ISX_DEFAULTCOMPONENT2</td><td>BACKGR~1.MP3|background.mp3</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\background.mp3</td><td>1</td><td/></row>
+		<row><td>crop.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>crop.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\crop.png</td><td>1</td><td/></row>
+		<row><td>dog.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>dog.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\dog.png</td><td>1</td><td/></row>
+		<row><td>effect1.wav</td><td>ISX_DEFAULTCOMPONENT2</td><td>effect1.wav</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\effect1.wav</td><td>1</td><td/></row>
+		<row><td>farm.jpg</td><td>ISX_DEFAULTCOMPONENT2</td><td>farm.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\farm.jpg</td><td>1</td><td/></row>
+		<row><td>glew32.dll</td><td>glew32.dll</td><td>glew32.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\glew32.dll</td><td>1</td><td/></row>
+		<row><td>hello.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>hello.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\hello.lua</td><td>1</td><td/></row>
+		<row><td>iconv.dll</td><td>iconv.dll</td><td>iconv.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\iconv.dll</td><td>1</td><td/></row>
+		<row><td>land.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>land.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\land.png</td><td>1</td><td/></row>
+		<row><td>libcocos2d.dll</td><td>libcocos2d.dll</td><td>LIBCOC~1.DLL|libcocos2d.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libcocos2d.dll</td><td>1</td><td/></row>
+		<row><td>libcocosdenshion.dll</td><td>libCocosDenshion.dll</td><td>LIBCOC~1.DLL|libCocosDenshion.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libCocosDenshion.dll</td><td>1</td><td/></row>
+		<row><td>libcurl.dll</td><td>libcurl.dll</td><td>libcurl.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libcurl.dll</td><td>1</td><td/></row>
+		<row><td>libtiff.dll</td><td>libtiff.dll</td><td>libtiff.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libtiff.dll</td><td>1</td><td/></row>
+		<row><td>lua5.1.dll</td><td>lua5.1.dll</td><td>LUA51~1.DLL|lua5.1.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\lua5.1.dll</td><td>1</td><td/></row>
+		<row><td>lua51.dll</td><td>lua51.dll</td><td>lua51.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\lua51.dll</td><td>1</td><td/></row>
 		<row><td>luaforwindows_v5.1.4_46.exe1</td><td>LuaForWindows_v5.1.4_46.exe1</td><td>LUAFOR~1.EXE|LuaForWindows_v5.1.4-46.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ssm\Downloads\LuaForWindows_v5.1.4-46.exe</td><td>1</td><td/></row>
-		<row><td>luamingmanager.ico</td><td>ISX_DEFAULTCOMPONENT4</td><td>LUAMIN~1.ICO|LuamingManager.ico</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ssm\Downloads\documents-export-2013-07-06\LuamingManager.ico</td><td>1</td><td/></row>
 		<row><td>luamingmanager.primary_outpu</td><td>LuamingManager.Primary_output</td><td>LuamingManager.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;LuamingManager&gt;|Built</td><td>3</td><td/></row>
-		<row><td>luamingsimulator.exe</td><td>LuamingSimulator.exe</td><td>LUAMIN~1.EXE|LuamingSimulator.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\LuamingSimulator.exe</td><td>1</td><td/></row>
-		<row><td>luamingsimulator.portrait.ex</td><td>LuamingSimulator.Portrait.exe</td><td>LUAMIN~1.EXE|LuamingSimulator.Portrait.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\LuamingSimulator.Portrait.exe</td><td>1</td><td/></row>
-		<row><td>main.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>main.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\main.lua</td><td>1</td><td/></row>
-		<row><td>main_portrait.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>MAIN_P~1.LUA|main_portrait.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\main_portrait.lua</td><td>1</td><td/></row>
-		<row><td>menu1.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>menu1.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\menu1.png</td><td>1</td><td/></row>
-		<row><td>menu2.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>menu2.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\menu2.png</td><td>1</td><td/></row>
-		<row><td>mozjs.dll</td><td>mozjs.dll</td><td>mozjs.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\mozjs.dll</td><td>1</td><td/></row>
-		<row><td>pthreadvce2.dll</td><td>pthreadVCE2.dll</td><td>PTHREA~1.DLL|pthreadVCE2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\pthreadVCE2.dll</td><td>1</td><td/></row>
-		<row><td>sqlite3.dll</td><td>sqlite3.dll</td><td>sqlite3.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\sqlite3.dll</td><td>1</td><td/></row>
-		<row><td>zlib1.dll</td><td>zlib1.dll</td><td>zlib1.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Simulator\zlib1.dll</td><td>1</td><td/></row>
+		<row><td>luamingsimulator.exe</td><td>LuamingSimulator.exe</td><td>LUAMIN~1.EXE|LuamingSimulator.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\LuamingSimulator.exe</td><td>1</td><td/></row>
+		<row><td>luamingsimulator.portrait.ex</td><td>LuamingSimulator.Portrait.exe</td><td>LUAMIN~1.EXE|LuamingSimulator.Portrait.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\LuamingSimulator.Portrait.exe</td><td>1</td><td/></row>
+		<row><td>main.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>main.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\main.lua</td><td>1</td><td/></row>
+		<row><td>main_portrait.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>MAIN_P~1.LUA|main_portrait.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\main_portrait.lua</td><td>1</td><td/></row>
+		<row><td>menu1.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>menu1.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\menu1.png</td><td>1</td><td/></row>
+		<row><td>menu2.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>menu2.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\menu2.png</td><td>1</td><td/></row>
+		<row><td>mozjs.dll</td><td>mozjs.dll</td><td>mozjs.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\mozjs.dll</td><td>1</td><td/></row>
+		<row><td>pthreadvce2.dll</td><td>pthreadVCE2.dll</td><td>PTHREA~1.DLL|pthreadVCE2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\pthreadVCE2.dll</td><td>1</td><td/></row>
+		<row><td>sqlite3.dll</td><td>sqlite3.dll</td><td>sqlite3.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\sqlite3.dll</td><td>1</td><td/></row>
+		<row><td>zlib1.dll</td><td>zlib1.dll</td><td>zlib1.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\zlib1.dll</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2223,30 +2225,31 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_7C5F7251_BE09_4EBC_9774_A40C656FDAFC_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_69E9602E_78BF_4059_87AB_7972A5E6CB70_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_39ABA7C5_35E3_4640_9B10_5C115B2C4910_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_723AA55C_7DF6_4CBE_BCD3_F9EEE0EF2447_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_53F76A4B_9DEC_4608_A27B_07514C483B22_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_9DEA6CEC_94A3_4988_8B72_F46A2EBFAF67_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_72B0AE01_0EC6_473E_95D1_183B3124AAD7_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_8C7FE801_9A5C_4812_A628_86700FAB8776_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LuaForWindows_v5.1.4_46.exe1</td><td/><td/><td>_6C6B14D8_56AB_42D4_8418_450CEA62374E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LuamingManager.Primary_output</td><td/><td/><td>_735E1B4A_24EC_4128_BED9_B3E5A7C13B0E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LuamingSimulator.Portrait.exe</td><td/><td/><td>_03B790EF_016E_4EAC_B652_3029C0FA8E4A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>LuamingSimulator.exe</td><td/><td/><td>_3B0479A1_FCB7_4672_88A8_C672CCC02677_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LuamingManager.Primary_output</td><td/><td/><td>_AFC4D302_CE88_470F_AEDF_80CF755B20EE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LuamingSimulator.Portrait.exe</td><td/><td/><td>_7F89846C_AE1A_4AF8_8B3B_A14D524621D6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>LuamingSimulator.exe</td><td/><td/><td>_DE114A79_DCB1_46CD_BD14_12F4734EB2D8_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_7B0FFF0B_46E0_4247_9743_125ECC5D7451_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent2</td><td/><td/><td>_0DC67A64_D5C4_4E68_9A57_B171A226F26B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent3</td><td/><td/><td>_177A198A_C5A7_4CCC_809B_06C37832D834_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>glew32.dll</td><td/><td/><td>_2C169DA6_2EC8_4871_A500_93EE21158383_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>iconv.dll</td><td/><td/><td>_480272C6_069A_4BC4_8BBB_3C1967DCBB1E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>libCocosDenshion.dll</td><td/><td/><td>_D40081EF_0DD9_4473_8FBE_BF4A8A7205E1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>libcocos2d.dll</td><td/><td/><td>_EED8EC52_E63F_4B3D_A1B6_B9EF5506A72F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>libcurl.dll</td><td/><td/><td>_79CBDEA4_BA9A_42A7_9A14_89F444A8B4AE_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>libtiff.dll</td><td/><td/><td>_837FE52D_D1F8_4116_B99E_80EB294BCDC9_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>lua5.1.dll</td><td/><td/><td>_EA52F367_3153_40AA_B268_DA2A7C4720F4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>lua51.dll</td><td/><td/><td>_3D936C4B_DED8_4E23_85BF_F37926A77FC5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>mozjs.dll</td><td/><td/><td>_FCACFD81_6157_4DFB_B173_C98D9DBD5413_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>pthreadVCE2.dll</td><td/><td/><td>_5211BB2E_D5D2_4F23_8205_26BA2A37D687_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>sqlite3.dll</td><td/><td/><td>_D823405B_8387_4D68_9EE2_F54076C3AAFF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>zlib1.dll</td><td/><td/><td>_575E7E2F_FEE4_417F_9402_7DB76191CF42_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NewComponent4</td><td/><td/><td>_00A76491_920D_411F_A4FE_40AAEBBC18B4_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>glew32.dll</td><td/><td/><td>_28B732EC_ADEF_4766_94E0_8C8CB2294658_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>iconv.dll</td><td/><td/><td>_BADA882C_8674_4614_BE08_6CEBD8FB7484_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>libCocosDenshion.dll</td><td/><td/><td>_CC167F9A_5069_4D2D_9BEF_970261DC919F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>libcocos2d.dll</td><td/><td/><td>_3024C253_1E81_4E38_A9B2_88474E72BB64_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>libcurl.dll</td><td/><td/><td>_2B003BA8_BAF9_424F_8DEF_0BF1FB7AF0AF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>libtiff.dll</td><td/><td/><td>_27BF600D_567B_48B5_A0EC_CE8CFC306606_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>lua5.1.dll</td><td/><td/><td>_B0C67C2D_6FB3_4D49_9B90_2A40EBFC2CFC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>lua51.dll</td><td/><td/><td>_E9747638_B82F_4960_A9B2_B77E5E5DB9EE_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>mozjs.dll</td><td/><td/><td>_90FA3453_82D4_4C65_BD0E_CFC7F6B43FC9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>pthreadVCE2.dll</td><td/><td/><td>_35AFA23C_C161_49AE_B843_89B756E793FD_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>sqlite3.dll</td><td/><td/><td>_718172C7_CBFE_4CDC_924C_BB6E17765515_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>zlib1.dll</td><td/><td/><td>_E8F72928_BEBD_4663_9736_90D01BB5F5EC_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2594,6 +2597,8 @@
 		<col key="yes" def="s72">ISProductConfiguration_</col>
 		<col key="yes" def="s72">Property</col>
 		<col def="L255">Value</col>
+		<row><td>Express</td><td>MSIPackageFileName</td><td>LuamingManager_v1.0.0</td></row>
+		<row><td>Express</td><td>SetupFileName</td><td>LuamingManager_v1.0.0</td></row>
 	</table>
 
 	<table name="ISRelease">
@@ -2631,9 +2636,9 @@
 		<row><td>Custom</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>2</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>100</td><td>0</td><td>1024</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-10</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>8.75</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-18</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>15.83</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
-		<row><td>DVD-5</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>4.38</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
+		<row><td>DVD-5</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>4.38</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://luaming.ssm.com/</td><td>D:\SSM\창의과제\루아밍\codesign\LuamingManager.pvk</td><td>D:\SSM\창의과제\루아밍\codesign\LuamingManager.pfx</td><td/><td/><td>536946719</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-9</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>7.95</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
-		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108573</td><td/><td/><td/><td>3</td></row>
+		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://luaming.ssm.com/</td><td/><td>D:\SSM\창의과제\루아밍\codesign\LuamingManager.pfx</td><td/><td/><td>108575</td><td/><td/><td/><td>3</td></row>
 		<row><td>WebDeployment</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>4</td><td>1033</td><td>2</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>124941</td><td/><td/><td/><td>3</td></row>
 	</table>
 
@@ -2679,9 +2684,9 @@
 		<row><td>Custom</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td/></row>
 		<row><td>DVD-10</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td/></row>
 		<row><td>DVD-18</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td/></row>
-		<row><td>DVD-5</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td/></row>
+		<row><td>DVD-5</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td>3C7FE56EEF2D27</td></row>
 		<row><td>DVD-9</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>0</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td/></row>
-		<row><td>SingleImage</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>1</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td/></row>
+		<row><td>SingleImage</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>install</td><td>install</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>1</td><td>http://www.installengine.com/Msiengine20</td><td>http://www.installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>0</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td>3C7FE56EEF2D27</td></row>
 		<row><td>WebDeployment</td><td>Express</td><td>0</td><td>http://</td><td>0</td><td>setup</td><td>Default</td><td>[LocalAppDataFolder]Downloaded Installations</td><td>2</td><td>http://www.Installengine.com/Msiengine20</td><td>http://www.Installengine.com/Msiengine20</td><td>0</td><td>http://www.installengine.com/cert05/isengine</td><td>2</td><td/><td/><td/><td>3</td><td>http://www.installengine.com/cert05/dotnetfx</td><td>0</td><td>1033</td><td/><td/><td/><td/><td/><td>3</td><td/><td>http://www.installengine.com/Msiengine30</td><td/></row>
 	</table>
 
@@ -2876,7 +2881,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1549706093</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1147075451</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
@@ -3688,10 +3693,20 @@
 		<row><td>IDS_PROGMSG_XML_UPDATE_FILE</td><td>1033</td><td>Updating XML file %s...</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Luaming Simulator</td><td>0</td><td/><td>-1683943295</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td>Luaming Manager</td><td>0</td><td/><td>-1147021660</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1042</td><td/><td>0</td><td/><td>-1147015548</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Luaming Manager</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuaForWindows_v5.1.4-46.exe</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuaForWindows_v5.1.4-46.exe</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.Portrait.exe</td><td>0</td><td/><td>-1683943295</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.exe</td><td>0</td><td/><td>-1147068828</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1042</td><td/><td>0</td><td/><td>-1147068828</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.Portrait.exe</td><td>0</td><td/><td>-1147068828</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1042</td><td/><td>0</td><td/><td>-1147068828</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.exe</td><td>0</td><td/><td>-1147068796</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1042</td><td/><td>0</td><td/><td>-1147068796</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.Portrait.exe</td><td>0</td><td/><td>-1147068796</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME9</td><td>1042</td><td/><td>0</td><td/><td>-1147068796</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-1683943295</td></row>
@@ -3981,17 +3996,19 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1683943295</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>-1549702700</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1549706093</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>-1147067227</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1147075451</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.exe</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1683943295</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1147070812</td></row>
+		<row><td>ID_STRING6</td><td>1042</td><td>Launch |Built</td><td>0</td><td/><td>-1147070812</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1683943295</td></row>
 	</table>
 
 	<table name="ISSwidtagProperty">
 		<col key="yes" def="s72">Name</col>
 		<col def="s0">Value</col>
-		<row><td>UniqueId</td><td>8906A6B6-55DC-4BC4-AA70-2AD6C761EB97</td></row>
+		<row><td>UniqueId</td><td>975AFBD9-F144-4FA4-9BDC-F777BEAEE126</td></row>
 	</table>
 
 	<table name="ISTargetImage">
@@ -4095,9 +4112,13 @@
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
 		<row><td>LuaForWindows_v5.1_57E444D7227848D3914EAD3AD67B35D1.exe</td><td/><td>C:\Users\ssm\Downloads\LuaForWindows_v5.1.4-46.exe</td><td>0</td></row>
 		<row><td>LuaForWindows_v5.1_F8380EB68CD74C11B704C076018F34AC.exe</td><td/><td>C:\Users\ssm\Downloads\LuaForWindows_v5.1.4-46.exe</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_L_0BCE626160BC4983A0F0DE3DCACBE443.exe</td><td/><td>C:\Program Files\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>LuamingSimulator.P_B3241973883C4398B2D21DC57B54023A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>LuamingSimulator.e_BE9049F5139E4771B9A47778A80A2E6D.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>UNINST_Uninstall_L_F663817671014E1FAC0790E95619FC90.exe</td><td/><td>C:\Program Files\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>_Built1_C67DDE45E2C54508B1926A0D6D46C68D.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
 		<row><td>_Built1_E9D8DD1F99054B68B9B5288248A9F543.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
 		<row><td>_Built_479441D5090D498FB7C8E6CE0AC1E84D.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
+		<row><td>_Built_949998C65CB9496E994325155889A0A7.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -4217,7 +4238,7 @@
 UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Express</td></row>
-		<row><td>EnableSwidtag</td><td>1</td></row>
+		<row><td>EnableSwidtag</td><td>0</td></row>
 		<row><td>ISCompilerOption_CompileBeforeBuild</td><td>1</td></row>
 		<row><td>ISCompilerOption_Debug</td><td>0</td></row>
 		<row><td>ISCompilerOption_IncludePath</td><td/></row>
@@ -4231,7 +4252,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{3DA5CBC7-938C-48C7-A1FD-1E43A0C17DCE}</td></row>
 		<row><td>ISUSSignature</td><td>{B0BA98C1-00C4-4CFB-832D-5F1108FAF5CB}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewShortcuts,viewISToday,viewRelease,viewProject,viewRealSetupDesign,viewUpgradePaths,viewSystemSearch,viewCustomActions,viewFeatureFiles,viewAppFiles,viewUpdateService,viewUI,viewRegistry,viewIniFiles,viewFileExtensions,viewEnvironmentVariables,viewVRoots,viewTextMessages,viewInstallScriptStd</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewObjects,viewShortcuts,viewISToday,viewRelease,viewProject,viewRealSetupDesign,viewUpgradePaths,viewSystemSearch,viewCustomActions,viewFeatureFiles,viewAppFiles,viewUpdateService,viewUI,viewRegistry,viewIniFiles,viewFileExtensions,viewEnvironmentVariables,viewVRoots,viewTextMessages,viewInstallScriptStd,viewSetupDesign</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4688,10 +4709,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>LuamingSimulator.exe</td><td/><td>ssm</td><td>2</td></row>
-		<row><td>FileKey2</td><td>LuamingSimulator.exe</td><td/><td>luamin_1_luamingmanagerinstall</td><td>2</td></row>
-		<row><td>FileKey3</td><td>LuamingManager.Primary_output</td><td/><td>luamin_1_luaming_manager</td><td>2</td></row>
-		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>NewComponent3</td><td/><td>luamin_1_luaming_manager</td><td>2</td></row>
+		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>NewComponent4</td><td/><td>luamin_1_luaming_manager</td><td>2</td></row>
 		<row><td>_Built</td><td>LuamingManager.Primary_output</td><td/><td>luamin_1_luaming_manager</td><td>2</td></row>
 	</table>
 
@@ -4778,9 +4796,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>luamin_1_luaming_manager</td><td>UNINST|Uninstall Luaming Manager</td><td>NewComponent3</td><td>[SystemFolder]msiexec.exe</td><td>/x {F1FB8FF9-5877-45DB-AC28-64A181FDF2FA}</td><td/><td/><td>UNINST_Uninstall_L_0BCE626160BC4983A0F0DE3DCACBE443.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>_Built</td><td>luamin_1_luaming_manager</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>LuamingManager.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_479441D5090D498FB7C8E6CE0AC1E84D.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME2##</td><td>LuamingManager.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built1_E9D8DD1F99054B68B9B5288248A9F543.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>luamin_1_luaming_manager</td><td>UNINST|Uninstall Luaming Manager</td><td>NewComponent4</td><td>[SystemFolder]msiexec.exe</td><td>/x {F1FB8FF9-5877-45DB-AC28-64A181FDF2FA}</td><td/><td/><td>UNINST_Uninstall_L_F663817671014E1FAC0790E95619FC90.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built</td><td>luamin_1_luaming_manager</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>LuamingManager.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_949998C65CB9496E994325155889A0A7.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>LuamingManager.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built1_C67DDE45E2C54508B1926A0D6D46C68D.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
