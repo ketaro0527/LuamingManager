@@ -105,6 +105,12 @@ namespace LuamingManager
 
         private void export_button_Click(object sender, RoutedEventArgs e)
         {
+            if (!checkAll(projectPath))
+            {
+                System.Windows.MessageBox.Show("프로젝트 내의 폴더 또는 파일 이름에 한글이나 공백이 포함되어 있습니다!");
+                return;
+            }
+
             if (checkProjectValid())
             {
                 System.Windows.Forms.SaveFileDialog sfd = new System.Windows.Forms.SaveFileDialog();
@@ -155,7 +161,7 @@ namespace LuamingManager
 
         private void thread_RunWorkerCompleted_Export(object sender, RunWorkerCompletedEventArgs e)
         {
-            System.Windows.MessageBox.Show(projectName + " is successfully exported!!");
+            //System.Windows.MessageBox.Show(projectName + " is successfully exported!!");
         }
 
 
@@ -226,9 +232,88 @@ namespace LuamingManager
             }
             else if (e.EventType == ZipProgressEventType.Saving_Completed)
             {
-                Thread.Sleep(500);
                 pd.Finish();
+                System.Windows.MessageBox.Show(projectName + " is successfully exported!!");
             }
+        }
+
+        private bool checkAll(string srcPath)
+        {
+            string[] dirs = Directory.GetDirectories(srcPath);
+            foreach (string dir in dirs)
+            {
+                string dirName = System.IO.Path.GetFileName(dir);
+
+                if (hasBlank(dirName))
+                    return false;
+                if (isHangle(dirName))
+                    return false;
+
+                bool subResult = checkAll(dir);
+                if (subResult == false)
+                    return false;
+            }
+
+            string[] files = Directory.GetFiles(srcPath);
+            foreach (string file in files)
+            {
+                string fileName = System.IO.Path.GetFileName(file);
+                if (hasBlank(fileName))
+                    return false;
+                if (isHangle(fileName))
+                    return false;
+            }
+
+            return true;
+        }
+
+        public bool hasBlank(string name)
+        {
+            if (name.Contains(" "))
+                return true;
+            if (name.Contains("\n"))
+                return true;
+            if (name.Contains("\r"))
+                return true;
+            if (name.Contains("\t"))
+                return true;
+            if (name.Contains("\v"))
+                return true;
+
+            return false;
+        }
+
+        public bool isHangle(char c)
+        {
+            bool ret = false;
+
+            if (c >= '\xAC00' && c <= '\xD7AF')
+            {
+                ret = true;
+            }
+            else if (c >= '\x3130' && c <= '\x318F')
+            {
+                ret = true;
+            }
+
+            return ret;
+        }
+
+        public bool isHangle(string c)
+        {
+            bool ret = false;
+            for (int i = 0; i < c.Length; i++)
+            {
+                char cur = c[i];
+                if (isHangle(cur))
+                {
+                    ret = true;
+                    break;
+                }
+            }
+
+            return ret;
+
         }
 
         private void exportProject()

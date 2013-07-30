@@ -1938,7 +1938,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>apidemo.lmg</td><td>ISX_DEFAULTCOMPONENT4</td><td>APIDemo.lmg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\APIDemo.lmg</td><td>1</td><td/></row>
+		<row><td>apidemo.lmg</td><td>ISX_DEFAULTCOMPONENT4</td><td>APIDemo.lmg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\APIDemo.lmg</td><td>1</td><td/></row>
 		<row><td>background.mp3</td><td>ISX_DEFAULTCOMPONENT2</td><td>BACKGR~1.MP3|background.mp3</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\background.mp3</td><td>1</td><td/></row>
 		<row><td>crop.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>crop.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\crop.png</td><td>1</td><td/></row>
 		<row><td>dog.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>dog.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\dog.png</td><td>1</td><td/></row>
