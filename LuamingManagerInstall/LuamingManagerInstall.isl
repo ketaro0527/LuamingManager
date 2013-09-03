@@ -1096,6 +1096,7 @@
 		<row><td>ISSelfRegisterCosting</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterCosting</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
+		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary19</td><td>LaunchProgram</td><td/><td/></row>
 		<row><td>LuaForWindows</td><td>1122</td><td>LUAFORWINDOWS</td><td>[LUAFORWINDOWS]LuaForWindows_v5.1.4-46.exe</td><td/><td/></row>
@@ -1172,7 +1173,7 @@
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>LUAMING_MANAGER</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>LUAMING_MANAGER1</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
@@ -1180,6 +1181,7 @@
 		<row><td>LUAFORWINDOWS</td><td>INSTALLDIR</td><td>LUAFOR~1|LuaForWindows</td><td/><td>0</td><td/></row>
 		<row><td>LUAMINGMANAGER</td><td>SSM</td><td>LUAMIN~1|LuamingManager</td><td/><td>0</td><td/></row>
 		<row><td>LUAMING_MANAGER</td><td>SSM</td><td>LUAMIN~1|Luaming Manager</td><td/><td>0</td><td/></row>
+		<row><td>LUAMING_MANAGER1</td><td>ProgramFilesFolder</td><td>LUAMIN~1|Luaming Manager</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
 		<row><td>MY_PRODUCT_NAME</td><td>SSM</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
@@ -1206,8 +1208,8 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
-		<row><td>luamin_1_luaming_manager</td><td>ssm</td><td>LUAMIN~1|Luaming Manager</td><td/><td>1</td><td/></row>
-		<row><td>ssm</td><td>ProgramMenuFolder</td><td>SSM</td><td/><td>1</td><td/></row>
+		<row><td>luamin_1_luaming_manager</td><td>newfolder1</td><td>LUAMIN~1|Luaming Manager</td><td/><td>1</td><td/></row>
+		<row><td>newfolder1</td><td>ProgramMenuFolder</td><td>##ID_STRING7##</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1946,6 +1948,7 @@
 		<row><td>farm.jpg</td><td>ISX_DEFAULTCOMPONENT2</td><td>farm.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\farm.jpg</td><td>1</td><td/></row>
 		<row><td>glew32.dll</td><td>glew32.dll</td><td>glew32.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\glew32.dll</td><td>1</td><td/></row>
 		<row><td>hello.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>hello.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\hello.lua</td><td>1</td><td/></row>
+		<row><td>icon.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>icon.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\icon.png</td><td>1</td><td/></row>
 		<row><td>iconv.dll</td><td>iconv.dll</td><td>iconv.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\iconv.dll</td><td>1</td><td/></row>
 		<row><td>land.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>land.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\land.png</td><td>1</td><td/></row>
 		<row><td>libcocos2d.dll</td><td>libcocos2d.dll</td><td>LIBCOC~1.DLL|libcocos2d.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libcocos2d.dll</td><td>1</td><td/></row>
@@ -2597,8 +2600,8 @@
 		<col key="yes" def="s72">ISProductConfiguration_</col>
 		<col key="yes" def="s72">Property</col>
 		<col def="L255">Value</col>
-		<row><td>Express</td><td>MSIPackageFileName</td><td>LuamingManager_v1.0.0</td></row>
-		<row><td>Express</td><td>SetupFileName</td><td>LuamingManager_v1.0.0</td></row>
+		<row><td>Express</td><td>MSIPackageFileName</td><td>LuamingManager_v1.0.1</td></row>
+		<row><td>Express</td><td>SetupFileName</td><td>LuamingManager_v1.0.1</td></row>
 	</table>
 
 	<table name="ISRelease">
@@ -2881,7 +2884,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1147075451</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>614550177</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
@@ -3996,12 +3999,14 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1683943295</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>-1147067227</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>-1147075451</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>614564513</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>614576801</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.exe</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1147070812</td></row>
 		<row><td>ID_STRING6</td><td>1042</td><td>Launch |Built</td><td>0</td><td/><td>-1147070812</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>SSM</td><td>0</td><td/><td>480338071</td></row>
+		<row><td>ID_STRING7</td><td>1042</td><td>NEWFOL~1|newfolder1</td><td>0</td><td/><td>480336023</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1683943295</td></row>
 	</table>
 
@@ -4164,6 +4169,7 @@
 		<row><td>ISSelfRegisterCosting</td><td/><td>2201</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td/><td>5601</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td/><td>6601</td><td/><td/></row>
+		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td/><td>2202</td><td/><td/></row>
 		<row><td>InstallFiles</td><td/><td>4000</td><td>InstallFiles</td><td/></row>
 		<row><td>InstallFinalize</td><td/><td>6600</td><td>InstallFinalize</td><td/></row>
@@ -4284,6 +4290,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td/><td>430</td><td>FindRelatedProducts</td><td/></row>
 		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td>ISPreventDowngrade</td><td/></row>
+		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Not UITEST And Not Installed</td><td>1110</td><td/><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
@@ -4631,9 +4638,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]LuamingManager.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{F1FB8FF9-5877-45DB-AC28-64A181FDF2FA}</td><td/></row>
+		<row><td>ProductCode</td><td>{7A9510D6-2C82-467D-B2BC-0F70CEA67752}</td><td/></row>
 		<row><td>ProductName</td><td>Luaming Manager</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.1000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4646,7 +4653,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
 		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;ISACTIONPROP2</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{A1BDE7C5-7936-402E-9682-CDF611832F7B}</td><td/></row>
@@ -4921,6 +4928,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
+		<row><td>{A1BDE7C5-7936-402E-9682-CDF611832F7B}</td><td></td><td>1.00.1000</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>NewUpgradeEntry2</td></row>
 	</table>
 
 	<table name="Verb">

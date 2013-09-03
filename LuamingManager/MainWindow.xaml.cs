@@ -33,6 +33,7 @@ namespace LuamingManager
         private string lastBrowsingDataFile = System.Windows.Forms.Application.UserAppDataPath + @"\lastBrowsingPath.txt";
         private string luamingReferenceURL = "http://210.118.74.97/LuamingReference/";
         private string projectName = "";
+        private string versionName = "";
 
         private BackgroundWorker thread;
         private ProgressDialog pd;
@@ -118,11 +119,11 @@ namespace LuamingManager
                 sfd.DefaultExt = "apk";
                 sfd.Filter = "Luaming Application Package (*.apk)|*.apk";
                 sfd.CheckPathExists = true;
-                sfd.FileName = project_name_label.Content + ".apk";
+                sfd.FileName = projectName + "_v" + versionName + ".apk";
                 if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     exportPath = sfd.FileName;
-                    projectName = project_name_label.Content.ToString();
+                    //projectName = project_name_label.Content.ToString();
 
                     thread = new BackgroundWorker();
                     thread.DoWork += new DoWorkEventHandler(thread_DoWork_Export);
@@ -144,7 +145,8 @@ namespace LuamingManager
                 sw.WriteLine(projectPath);
                 sw.Close();
 
-                project_name_label.Content = System.IO.Path.GetFileName(projectPath);
+                projectName = System.IO.Path.GetFileName(projectPath);
+                project_name_label.Content = projectName;
                 project_path_textbox.Text = projectPath;
                 simulate_button.IsEnabled = true;
                 export_button.IsEnabled = true;
@@ -186,7 +188,8 @@ namespace LuamingManager
                 {
                     projectPath = path;
                     project_path_textbox.Text = projectPath;
-                    project_name_label.Content = System.IO.Path.GetFileName(projectPath);
+                    projectName = System.IO.Path.GetFileName(projectPath);
+                    project_name_label.Content = projectName;
                     simulate_button.IsEnabled = true;
                     export_button.IsEnabled = true;
                     config_button.IsEnabled = true;
@@ -371,24 +374,26 @@ namespace LuamingManager
 
                 JsonTextParser jsonParser = new JsonTextParser();
                 JsonObjectCollection configObject = (JsonObjectCollection)jsonParser.Parse(config);
-                string projectName = configObject["PROJECT_NAME"].GetValue().ToString();
-                if (!Regex.IsMatch(projectName, @"^[a-zA-Z](\w?)+"))
+                string pName = configObject["PROJECT_NAME"].GetValue().ToString();
+                if (!Regex.IsMatch(pName, @"^[a-zA-Z](\w?)+"))
                 {
                     System.Windows.MessageBox.Show("LuamingProject.json: 프로젝트 이름이 올바르지 않습니다!");
                     return false;
                 }
+                projectName = pName;
                 string packageName = configObject["PACKAGE_NAME"].GetValue().ToString();
                 if (!Regex.IsMatch(packageName, @"^[a-zA-Z]([a-zA-Z0-9_]?)+((\.[a-zA-Z0-9_]+)+)$"))
                 {
                     System.Windows.MessageBox.Show("LuamingProject.json: 패키지 이름이 올바르지 않습니다!");
                     return false;
                 }
-                string versionName = configObject["VERSION_NAME"].GetValue().ToString();
-                if (!Regex.IsMatch(versionName, @"^[1-9]([0-9]?)+((\.[0-9]+)+)$"))
+                string vName = configObject["VERSION_NAME"].GetValue().ToString();
+                if (!Regex.IsMatch(vName, @"^[1-9]([0-9]?)+((\.[0-9]+)+)$"))
                 {
                     System.Windows.MessageBox.Show("LuamingProject.json: 버전 이름이 올바르지 않습니다!");
                     return false;
                 }
+                versionName = vName;
                 if (!configObject["VERSION_CODE"].GetValue().GetType().ToString().Equals("System.Double"))
                 {
                     System.Windows.MessageBox.Show("LuamingProject.json: 버전 코드가 올바르지 않습니다!");
@@ -448,6 +453,12 @@ namespace LuamingManager
 
         private void config_button_Click(object sender, RoutedEventArgs e)
         {
+            ProjectConfigurationWindow pcw = new ProjectConfigurationWindow();
+            if (pcw.ShowDialog() == true)
+            {
+                applyConfig();
+            }
+            /*
             string configFilePath = projectPath + @"\assets\LuamingProject.json";
             if (!File.Exists(configFilePath))
             {
@@ -455,6 +466,48 @@ namespace LuamingManager
                 return;
             }
             System.Diagnostics.Process.Start("notepad.exe", configFilePath);
+             */
+        }
+
+        private void applyConfig()
+        {
+            string projectConfigPath = MainWindow.projectPath + @"\assets\LuamingProject.json";
+            if (!File.Exists(projectConfigPath))
+            {
+                System.Windows.MessageBox.Show("LuamingProject.json 파일이 없습니다!");
+            }
+            try
+            {
+                StreamReader sr = File.OpenText(projectConfigPath);
+                string config = sr.ReadToEnd();
+                sr.Close();
+
+                JsonTextParser jsonParser = new JsonTextParser();
+                JsonObjectCollection configObject = (JsonObjectCollection)jsonParser.Parse(config);
+                string prevProjectName = projectName;
+                projectName = configObject["PROJECT_NAME"].GetValue().ToString();
+                project_name_label.Content = projectName;
+                versionName = configObject["VERSION_NAME"].GetValue().ToString();
+
+                if (prevProjectName != projectName)
+                {
+                    string newPath = projectPath.Replace(prevProjectName, projectName);
+                    Directory.Move(projectPath, newPath);
+                    projectPath = newPath;
+                    project_path_textbox.Text = projectPath;
+                    StreamWriter sw = File.CreateText(lastBrowsingDataFile);
+                    sw.WriteLine(projectPath);
+                    sw.Close();
+                }
+            }
+            catch (IOException)
+            {
+                System.Windows.MessageBox.Show("프로젝트 폴더가 열려있어 이름을 바꿀 수 없습니다.");
+            }
+            catch (Exception e)
+            {
+                System.Windows.MessageBox.Show(e.ToString());
+            }
         }
 
         private void openproj_button_Click(object sender, RoutedEventArgs e)

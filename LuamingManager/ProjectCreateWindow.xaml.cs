@@ -235,11 +235,13 @@ namespace LuamingManager
             JsonStringValue projectNameJson = new JsonStringValue("PROJECT_NAME");
             projectNameJson.Value = projectName;
             JsonStringValue packageNameJson = new JsonStringValue("PACKAGE_NAME");
-            packageNameJson.Value = packageName;
+            packageNameJson.Value = packageName;            
             JsonStringValue versionNameJson = new JsonStringValue("VERSION_NAME");
             versionNameJson.Value = "1.0.0";
             JsonNumericValue versionCodeJson = new JsonNumericValue("VERSION_CODE");
             versionCodeJson.Value = 1;
+            JsonStringValue offlineIconJson = new JsonStringValue("OFFLINE_ICON");
+            offlineIconJson.Value = "icon.png";
             JsonStringValue mainScriptJson = new JsonStringValue("MAIN_SCRIPT");
             mainScriptJson.Value = "main.lua";
             JsonStringValue orientationJson = new JsonStringValue("ORIENTATION");
@@ -251,6 +253,7 @@ namespace LuamingManager
             luamingJson.Add(packageNameJson);
             luamingJson.Add(versionNameJson);
             luamingJson.Add(versionCodeJson);
+            luamingJson.Add(offlineIconJson);
             luamingJson.Add(mainScriptJson);
             luamingJson.Add(orientationJson);
 

@@ -119,6 +119,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ProjectConfigurationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ProjectCreateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,6 +131,9 @@
   <ItemGroup>
     <Compile Include="ProgressDialog.xaml.cs">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectConfigurationWindow.xaml.cs">
+      <DependentUpon>ProjectConfigurationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProjectCreateWindow.xaml.cs">
       <DependentUpon>ProjectCreateWindow.xaml</DependentUpon>
