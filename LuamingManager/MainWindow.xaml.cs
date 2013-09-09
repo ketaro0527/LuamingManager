@@ -613,12 +613,17 @@ namespace LuamingManager
         private bool isAndroidSDKFolder(string path)
         {
             if (Directory.Exists(path + @"\platform-tools") &&
-                        File.Exists(path + @"\platform-tools\aapt.exe") &&
                         File.Exists(path + @"\platform-tools\adb.exe") &&
                         Directory.Exists(path + @"\tools") &&
-                        File.Exists(path + @"\tools\apkbuilder.bat") &&
                         File.Exists(path + @"\tools\ddms.bat"))
             {
+                string asPath = System.Windows.Forms.Application.StartupPath + @"\AndroidSimulator";
+
+                if (!File.Exists(path + @"\platform-tools\aapt.exe"))
+                    File.Copy(asPath + @"\aapt.exe", path + @"\platform-tools\aapt.exe");
+                if (!File.Exists(path + @"\tools\apkbuilder.bat"))
+                    File.Copy(asPath + @"\apkbuilder.bat", path + @"\tools\apkbuilder.bat");
+
                 return true;
             }
 
@@ -634,7 +639,7 @@ namespace LuamingManager
 
         private string makeTempAPK(string sdkPath)
         {
-            string androidSimulatorPath = Environment.CurrentDirectory + @"\AndroidSimulator";
+            string androidSimulatorPath = System.Windows.Forms.Application.StartupPath +@"\AndroidSimulator";
             if (!Directory.Exists(androidSimulatorPath))
             {
                 System.Windows.Forms.MessageBox.Show("필요 모듈이 삭제, 또는 이동되었습니다\nLuaming Manager를 재설치해주세요");
@@ -713,7 +718,7 @@ namespace LuamingManager
             pd.UpdateProgress(0.6);
             pd.UpdateStatus("Add AndroidManifest...");
             System.Diagnostics.Process aapt = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo aaptStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\platform-tools\aapt", "package -u -M " + androidSimulatorPath + @"\AndroidManifest.xml -S " + androidSimulatorPath + @"\LuamingAndroidSimulator\res -I " + androidSimulatorPath + @"\android.jar -F " + asProjectPath + @"\" + projectName + "_v" + versionName + ".apk");
+            System.Diagnostics.ProcessStartInfo aaptStartInfo = new System.Diagnostics.ProcessStartInfo("\"" + sdkPath + @"\platform-tools\aapt" + "\"", "package -u -M " + "\"" + androidSimulatorPath + @"\AndroidManifest.xml" + "\"" + " -S " + "\"" + androidSimulatorPath + @"\LuamingAndroidSimulator\res" + "\"" + " -I " + "\"" + androidSimulatorPath + @"\android.jar" + "\"" + " -F " + "\"" + asProjectPath + @"\" + projectName + "_v" + versionName + ".apk" + "\"");
             aaptStartInfo.CreateNoWindow = true;
             aaptStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             aapt.StartInfo = aaptStartInfo;
@@ -724,7 +729,7 @@ namespace LuamingManager
             pd.UpdateProgress(0.7);
             pd.UpdateStatus("Signing...");
             System.Diagnostics.Process apkbuilder = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo apkbuilderStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\tools\apkbuilder", asProjectPath + @"\" + projectName + "_v" + versionName + "-Debug.apk -z " + asProjectPath + @"\" + projectName + "_v" + versionName + ".apk");
+            System.Diagnostics.ProcessStartInfo apkbuilderStartInfo = new System.Diagnostics.ProcessStartInfo("\"" + sdkPath + @"\tools\apkbuilder" + "\"", "\"" + asProjectPath + @"\" + projectName + "_v" + versionName + "-Debug.apk" + "\"" + " -z " + "\"" + asProjectPath + @"\" + projectName + "_v" + versionName + ".apk" + "\"");
             apkbuilderStartInfo.CreateNoWindow = true;
             apkbuilderStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             apkbuilder.StartInfo = apkbuilderStartInfo;
@@ -755,7 +760,7 @@ namespace LuamingManager
                 if (!isDDMSRunning)
                 {
                     System.Diagnostics.Process ddms = new System.Diagnostics.Process();
-                    System.Diagnostics.ProcessStartInfo ddmsStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\tools\ddms");
+                    System.Diagnostics.ProcessStartInfo ddmsStartInfo = new System.Diagnostics.ProcessStartInfo("\"" + sdkPath + @"\tools\ddms" + "\"");
                     ddmsStartInfo.CreateNoWindow = true;
                     ddmsStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                     ddms.StartInfo = ddmsStartInfo;
@@ -766,7 +771,7 @@ namespace LuamingManager
                 pd.UpdateProgress(0.9);
                 pd.UpdateStatus("Install Application to Device...");
                 System.Diagnostics.Process adbInstall = new System.Diagnostics.Process();
-                System.Diagnostics.ProcessStartInfo adbInstallStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\platform-tools\adb", "-d install -r " + asProjectPath + @"\" + projectName + "_v" + versionName + "-Debug.apk");
+                System.Diagnostics.ProcessStartInfo adbInstallStartInfo = new System.Diagnostics.ProcessStartInfo("\"" + sdkPath + @"\platform-tools\adb" + "\"", "-d install -r " + "\"" + asProjectPath + @"\" + projectName + "_v" + versionName + "-Debug.apk" + "\"");
                 adbInstallStartInfo.CreateNoWindow = true;
                 adbInstallStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                 adbInstall.StartInfo = adbInstallStartInfo;
@@ -777,7 +782,7 @@ namespace LuamingManager
                 pd.UpdateProgress(1.0);
                 pd.UpdateStatus("Starting Application...");
                 System.Diagnostics.Process adbExcute = new System.Diagnostics.Process();
-                System.Diagnostics.ProcessStartInfo adbExcuteStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\platform-tools\adb", "shell am start -n " + packageName + "/com.luaming.lib.LuamingAndroidSimulator");
+                System.Diagnostics.ProcessStartInfo adbExcuteStartInfo = new System.Diagnostics.ProcessStartInfo("\"" + sdkPath + @"\platform-tools\adb" + "\"", "shell am start -n " + packageName + "/com.luaming.lib.LuamingAndroidSimulator");
                 adbExcuteStartInfo.CreateNoWindow = true;
                 adbExcuteStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                 adbExcute.StartInfo = adbExcuteStartInfo;
