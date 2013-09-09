@@ -20,6 +20,7 @@ using System.Threading;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
 using System.Windows.Threading;
+using System.Xml;
 
 namespace LuamingManager
 {
@@ -31,9 +32,12 @@ namespace LuamingManager
         public static string projectPath = null;
         private string exportPath;
         private string lastBrowsingDataFile = System.Windows.Forms.Application.UserAppDataPath + @"\lastBrowsingPath.txt";
+        private string androidSDKPathFile = System.Windows.Forms.Application.UserAppDataPath + @"\android_sdk_path.txt";
         private string luamingReferenceURL = "http://210.118.74.97/LuamingReference/";
         private string projectName = "";
         private string versionName = "";
+        private string packageName = "";
+        private string androidSDKPath = "";
 
         private BackgroundWorker thread;
         private ProgressDialog pd;
@@ -148,6 +152,7 @@ namespace LuamingManager
                 projectName = System.IO.Path.GetFileName(projectPath);
                 project_name_label.Content = projectName;
                 project_path_textbox.Text = projectPath;
+                android_simulate_button.IsEnabled = true;
                 simulate_button.IsEnabled = true;
                 export_button.IsEnabled = true;
                 config_button.IsEnabled = true;
@@ -190,6 +195,7 @@ namespace LuamingManager
                     project_path_textbox.Text = projectPath;
                     projectName = System.IO.Path.GetFileName(projectPath);
                     project_name_label.Content = projectName;
+                    android_simulate_button.IsEnabled = true;
                     simulate_button.IsEnabled = true;
                     export_button.IsEnabled = true;
                     config_button.IsEnabled = true;
@@ -329,19 +335,19 @@ namespace LuamingManager
             setTotalEntry(projectPath);
 
             string[] dirs = Directory.GetDirectories(projectPath);
-            string[] files = Directory.GetFiles(projectPath);
+            //string[] files = Directory.GetFiles(projectPath);
             
             foreach (string dir in dirs)
             {
                 string dirName = System.IO.Path.GetFileName(dir);
                 zip.AddDirectory(dir, dirName);   
             }
-            
+            /*
             foreach (string file in files)
             {
                 zip.AddFile(file, @"");
             }
-
+            */
             zip.Save(exportPath);
         }
 
@@ -381,12 +387,13 @@ namespace LuamingManager
                     return false;
                 }
                 projectName = pName;
-                string packageName = configObject["PACKAGE_NAME"].GetValue().ToString();
-                if (!Regex.IsMatch(packageName, @"^[a-zA-Z]([a-zA-Z0-9_]?)+((\.[a-zA-Z0-9_]+)+)$"))
+                string packName = configObject["PACKAGE_NAME"].GetValue().ToString();
+                if (!Regex.IsMatch(packName, @"^[a-zA-Z]([a-zA-Z0-9_]?)+((\.[a-zA-Z0-9_]+)+)$"))
                 {
                     System.Windows.MessageBox.Show("LuamingProject.json: 패키지 이름이 올바르지 않습니다!");
                     return false;
                 }
+                packageName = packName;
                 string vName = configObject["VERSION_NAME"].GetValue().ToString();
                 if (!Regex.IsMatch(vName, @"^[1-9]([0-9]?)+((\.[0-9]+)+)$"))
                 {
@@ -488,6 +495,7 @@ namespace LuamingManager
                 projectName = configObject["PROJECT_NAME"].GetValue().ToString();
                 project_name_label.Content = projectName;
                 versionName = configObject["VERSION_NAME"].GetValue().ToString();
+                packageName = configObject["PACKAGE_NAME"].GetValue().ToString();
 
                 if (prevProjectName != projectName)
                 {
@@ -600,6 +608,249 @@ namespace LuamingManager
             {
                 System.Diagnostics.Process.Start("explorer.exe", luamingReferenceURL);
             }
+        }
+
+        private bool isAndroidSDKFolder(string path)
+        {
+            if (Directory.Exists(path + @"\platform-tools") &&
+                        File.Exists(path + @"\platform-tools\aapt.exe") &&
+                        File.Exists(path + @"\platform-tools\adb.exe") &&
+                        Directory.Exists(path + @"\tools") &&
+                        File.Exists(path + @"\tools\apkbuilder.bat") &&
+                        File.Exists(path + @"\tools\ddms.bat"))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool IsWindowOpen<T>(string name = "") where T : Window
+        {
+            return string.IsNullOrEmpty(name)
+               ? System.Windows.Application.Current.Windows.OfType<T>().Any()
+               : System.Windows.Application.Current.Windows.OfType<T>().Any(w => w.Name.Equals(name));
+        }
+
+        private string makeTempAPK(string sdkPath)
+        {
+            string androidSimulatorPath = Environment.CurrentDirectory + @"\AndroidSimulator";
+            if (!Directory.Exists(androidSimulatorPath))
+            {
+                System.Windows.Forms.MessageBox.Show("필요 모듈이 삭제, 또는 이동되었습니다\nLuaming Manager를 재설치해주세요");
+                return null;
+            }
+
+            // Check Devices
+            pd.UpdateProgress(0.1);
+            pd.UpdateStatus("Check Android Device...");
+            System.Diagnostics.Process adbDevice = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo adbDeviceStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\platform-tools\adb", "devices");
+            adbDeviceStartInfo.CreateNoWindow = true;
+            adbDeviceStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            adbDeviceStartInfo.UseShellExecute = false;
+            adbDeviceStartInfo.RedirectStandardOutput = true;
+            adbDevice.StartInfo = adbDeviceStartInfo;
+            adbDevice.Start();
+            adbDevice.WaitForExit();
+            adbDevice.StandardOutput.ReadLine(); // Skip
+            int device_count = 0;
+            while (!adbDevice.StandardOutput.EndOfStream)
+            {
+                string line = adbDevice.StandardOutput.ReadLine();
+                if (line.Contains("device") && !line.Contains("emulator"))
+                    device_count++;
+            }
+            if (device_count == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("연결된 Android Device가 없습니다\n연결 후 다시 시도하세요");
+                pd.Close();
+                return null;
+            }
+            else if (device_count > 1)
+            {
+                System.Windows.Forms.MessageBox.Show("연결된 Android Device가 2대 이상입니다\n1대만 연결 후 다시 시도하세요");
+                pd.Close();
+                return null;
+            }
+
+            // 해당 프로젝트 폴더 확인 및 생성
+            pd.UpdateProgress(0.2);
+            pd.UpdateStatus("Check Project Folder...");
+            string asProjectPath = System.Windows.Forms.Application.UserAppDataPath + @"\" + projectName;
+            if (!Directory.Exists(asProjectPath))
+                Directory.CreateDirectory(asProjectPath);
+
+            // strings.xml 수정
+            pd.UpdateProgress(0.3);
+            pd.UpdateStatus("Modify Application Name...");
+            XmlDocument stringXML = new XmlDocument();
+            stringXML.Load(androidSimulatorPath + @"\LuamingAndroidSimulator\res\values\strings.xml");
+            XmlElement strings_child = (XmlElement)stringXML.DocumentElement.FirstChild;
+            if (strings_child.GetAttribute("name").Equals("app_name"))
+                strings_child.InnerText = projectName;
+            stringXML.Save(androidSimulatorPath + @"\LuamingAndroidSimulator\res\values\strings.xml");
+
+            // AndroidManifest.xml 수정
+            pd.UpdateProgress(0.4);
+            pd.UpdateStatus("Modify Package Name...");
+            XmlDocument manifestXML = new XmlDocument();
+            manifestXML.Load(androidSimulatorPath + @"\AndroidManifest.xml");
+            XmlElement manifest_child = (XmlElement)manifestXML.DocumentElement;
+            if (manifest_child.HasAttribute("package"))
+                manifest_child.SetAttribute("package", packageName);
+            manifestXML.Save(androidSimulatorPath + @"\AndroidManifest.xml");
+
+            // 1차 압축
+            pd.UpdateProgress(0.5);
+            pd.UpdateStatus("Compressing Files...");
+            ZipFile zipfile = new ZipFile();
+            zipfile.AddDirectory(androidSimulatorPath + @"\LuamingAndroidSimulator");
+            zipfile.AddDirectory(projectPath + @"\assets", "/assets");
+            zipfile.Save(asProjectPath + @"\" + projectName + "_v" + versionName + ".apk");
+
+            // AndroidManifest.xml 합치기
+            pd.UpdateProgress(0.6);
+            pd.UpdateStatus("Add AndroidManifest...");
+            System.Diagnostics.Process aapt = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo aaptStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\platform-tools\aapt", "package -u -M " + androidSimulatorPath + @"\AndroidManifest.xml -S " + androidSimulatorPath + @"\LuamingAndroidSimulator\res -I " + androidSimulatorPath + @"\android.jar -F " + asProjectPath + @"\" + projectName + "_v" + versionName + ".apk");
+            aaptStartInfo.CreateNoWindow = true;
+            aaptStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            aapt.StartInfo = aaptStartInfo;
+            aapt.Start();
+            aapt.WaitForExit();
+            
+            // Signing 하기
+            pd.UpdateProgress(0.7);
+            pd.UpdateStatus("Signing...");
+            System.Diagnostics.Process apkbuilder = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo apkbuilderStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\tools\apkbuilder", asProjectPath + @"\" + projectName + "_v" + versionName + "-Debug.apk -z " + asProjectPath + @"\" + projectName + "_v" + versionName + ".apk");
+            apkbuilderStartInfo.CreateNoWindow = true;
+            apkbuilderStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            apkbuilder.StartInfo = apkbuilderStartInfo;
+            apkbuilder.Start();
+            apkbuilder.WaitForExit();
+
+            return asProjectPath;
+        }
+
+        private void startAndroidSimulation(string sdkPath)
+        {
+            string asProjectPath = makeTempAPK(sdkPath);
+            if (asProjectPath != null)
+            {
+                // Open DDMS
+                pd.UpdateProgress(0.8);
+                pd.UpdateStatus("Open DDMS...");
+                bool isDDMSRunning = false;
+                System.Diagnostics.Process[] procList = System.Diagnostics.Process.GetProcesses();
+                foreach (System.Diagnostics.Process process in procList)
+                {
+                    if (process.MainWindowTitle.Contains("Dalvik"))
+                    {
+                        isDDMSRunning = true;
+                        break;
+                    }
+                }
+                if (!isDDMSRunning)
+                {
+                    System.Diagnostics.Process ddms = new System.Diagnostics.Process();
+                    System.Diagnostics.ProcessStartInfo ddmsStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\tools\ddms");
+                    ddmsStartInfo.CreateNoWindow = true;
+                    ddmsStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    ddms.StartInfo = ddmsStartInfo;
+                    ddms.Start();
+                }
+
+                // Install
+                pd.UpdateProgress(0.9);
+                pd.UpdateStatus("Install Application to Device...");
+                System.Diagnostics.Process adbInstall = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo adbInstallStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\platform-tools\adb", "-d install -r " + asProjectPath + @"\" + projectName + "_v" + versionName + "-Debug.apk");
+                adbInstallStartInfo.CreateNoWindow = true;
+                adbInstallStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                adbInstall.StartInfo = adbInstallStartInfo;
+                adbInstall.Start();
+                adbInstall.WaitForExit();
+
+                // Excute
+                pd.UpdateProgress(1.0);
+                pd.UpdateStatus("Starting Application...");
+                System.Diagnostics.Process adbExcute = new System.Diagnostics.Process();
+                System.Diagnostics.ProcessStartInfo adbExcuteStartInfo = new System.Diagnostics.ProcessStartInfo(sdkPath + @"\platform-tools\adb", "shell am start -n " + packageName + "/com.luaming.lib.LuamingAndroidSimulator");
+                adbExcuteStartInfo.CreateNoWindow = true;
+                adbExcuteStartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                adbExcute.StartInfo = adbExcuteStartInfo;
+                adbExcute.Start();
+                adbExcute.WaitForExit();
+
+                pd.UpdateStatus("Done!");
+            }
+        }
+
+        private void android_simulate_button_handler()
+        {
+            if (!File.Exists(androidSDKPathFile))
+            {
+                System.Windows.Forms.MessageBox.Show("Android Simulate를 위해서는 Android SDK가 필요합니다\nAndroid SDK 폴더를 선택해주세요");
+SDKSELECT:
+                FolderBrowserDialog fd = new FolderBrowserDialog();
+                if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (isAndroidSDKFolder(fd.SelectedPath))
+                    {
+                        StreamWriter sw = File.CreateText(androidSDKPathFile);
+                        sw.WriteLine(fd.SelectedPath);
+                        sw.Close();
+
+                        androidSDKPath = fd.SelectedPath;
+                    }
+                    else
+                    {
+                        System.Windows.Forms.MessageBox.Show("Android SDK 폴더가 아닙니다\n다시 선택해주세요");
+                        goto SDKSELECT;
+                    }
+                }
+            }
+            else
+            {
+                StreamReader sr = File.OpenText(androidSDKPathFile);
+                string tempPath = sr.ReadToEnd();
+                sr.Close();
+                tempPath = tempPath.Trim();
+
+                if (isAndroidSDKFolder(tempPath))
+                    androidSDKPath = tempPath;
+                else
+                    android_simulate_button_handler();
+            }
+
+            if (androidSDKPath.Length > 0)
+            {
+                thread = new BackgroundWorker();
+                thread.DoWork += new DoWorkEventHandler(thread_DoWork_AndroidSimulate);
+                thread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(thread_RunWorkerCompleted_AndroidSimulate);
+                thread.RunWorkerAsync();
+
+                pd = new ProgressDialog();
+                pd.Show();
+            }
+        }
+
+        private void android_simulate_button_Click(object sender, RoutedEventArgs e)
+        {
+            checkProjectValid();
+            android_simulate_button_handler();
+        }
+
+        private void thread_DoWork_AndroidSimulate(object sender, DoWorkEventArgs e)
+        {
+            startAndroidSimulation(androidSDKPath);
+        }
+
+        private void thread_RunWorkerCompleted_AndroidSimulate(object sender, RunWorkerCompletedEventArgs e)
+        {
+            pd.Close();
         }
     }
 }

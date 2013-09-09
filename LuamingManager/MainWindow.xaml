@@ -1,7 +1,7 @@
 ﻿<Window x:Class="LuamingManager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="LuamingManager" Height="313" Width="699" ResizeMode="CanMinimize" Background="Transparent" Foreground="{x:Null}" Icon="/LuamingManager;component/Images/app_button.ico" FontFamily="Tekton Pro" FontSize="16" WindowStyle="None">
+        Title="LuamingManager" Height="316" Width="699" ResizeMode="CanMinimize" Background="Transparent" Foreground="{x:Null}" Icon="/LuamingManager;component/Images/app_button.ico" FontFamily="Tekton Pro" FontSize="16" WindowStyle="None">
     <Grid Background="#FF32394B">
         <Rectangle Stroke="#347373">
         </Rectangle>
@@ -20,7 +20,7 @@
                 <ImageBrush ImageSource="/LuamingManager;component/Images/window_bar.png" />
             </Button.Background>
         </Button>
-        <Button Content="Export" Height="38" HorizontalAlignment="Right" Margin="0,258,12,0" Name="export_button" VerticalAlignment="Top" Width="150" Click="export_button_Click" IsEnabled="False" FontFamily="Tekton Pro" FontSize="18" FocusVisualStyle="{x:Null}">
+        <Button Content="Export" Height="38" HorizontalAlignment="Right" Margin="0,258,179,0" Name="export_button" VerticalAlignment="Top" Width="150" Click="export_button_Click" IsEnabled="False" FontFamily="Tekton Pro" FontSize="18" FocusVisualStyle="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/LuamingManager;component/Images/window_bar.png" />
             </Button.Background>
@@ -48,5 +48,10 @@
         <Image Height="28" HorizontalAlignment="Right" Margin="0,3,5,0" Name="close_button" Stretch="Fill" VerticalAlignment="Top" Width="28" Source="/LuamingManager;component/Images/close.png" MouseLeftButtonDown="close_button_MouseLeftButtonDown" />
         <Image Height="28" HorizontalAlignment="Right" Margin="0,3,39,0" Name="minimize_button" Stretch="Fill" VerticalAlignment="Top" Width="28" Source="/LuamingManager;component/Images/minimize.png" MouseLeftButtonDown="minimize_button_MouseLeftButtonDown" />
         <Image Height="28" HorizontalAlignment="Right" Margin="0,3,73,0" Name="reference_button" Stretch="Fill" VerticalAlignment="Top" Width="84" Source="/LuamingManager;component/Images/reference.png" MouseLeftButtonDown="reference_button_MouseLeftButtonDown" />
+        <Button Content="Android Simulate" FocusVisualStyle="{x:Null}" FontFamily="Tekton Pro" FontSize="18" Height="38" HorizontalAlignment="Right" IsEnabled="False" Margin="0,258,12,0" Name="android_simulate_button" VerticalAlignment="Top" Width="150" Click="android_simulate_button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/LuamingManager;component/Images/window_bar.png" />
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

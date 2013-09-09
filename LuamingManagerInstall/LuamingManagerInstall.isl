@@ -342,9 +342,20 @@
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{6CD150A5-FB4E-4554-BCB8-A066B822032F}</td><td>SIMULATOR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{2D01A954-1462-45BD-A1A7-14479B0231E1}</td><td>TEMPLATE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{D59BA914-4B4B-4CA8-A52A-5FF7B7FA8725}</td><td>DRAWABLE_HDPI</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{AE4DE193-0466-4209-9495-AD14140C0134}</td><td>DRAWABLE_LDPI</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{BA8331CB-D968-4BA5-BA05-9F5919989073}</td><td>DRAWABLE_MDPI</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{D6CC71F3-85D5-41B5-BA7B-08B571BCD510}</td><td>DRAWABLE_XHDPI</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{D45F601E-60EC-412E-9F45-CC4310A42905}</td><td>VALUES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{D5FFEB5D-CFD5-489B-8614-C1D541561854}</td><td>SSM1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{7318DCC0-BF6D-4B72-9686-1B171C4C505E}</td><td>ASSETS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{7CA581E4-2470-4EEF-8D63-CCD10EFE1609}</td><td>LUAFORWINDOWS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{E87CB636-275F-4F8C-938A-4802AB000032}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{779370FE-3B0B-4C49-9C0D-40A00466E7D7}</td><td>ANDROIDSIMULATOR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{5371D743-D225-4E87-B836-260A0A4D09EF}</td><td>LUAMINGANDROIDSIMULATOR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{346AC015-B528-47E1-9014-D61AF45CABF9}</td><td>LIB</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{2BF1B7B5-7D20-4361-823E-E5C7C45D7F60}</td><td>ARMEABI</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{C38C574D-4AFF-49AB-98E2-76BB97844232}</td><td>RES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LuaForWindows_v5.1.4_46.exe1</td><td>{D99C681B-EFDD-488D-9532-30231E0DD380}</td><td>LUAFORWINDOWS</td><td>2</td><td/><td>luaforwindows_v5.1.4_46.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LuamingManager.Primary_output</td><td>{CF323C0E-2BF3-4356-9004-8B4554F3B28D}</td><td>INSTALLDIR</td><td>2</td><td/><td>luamingmanager.primary_outpu</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>LuamingSimulator.Portrait.exe</td><td>{AD9AEB69-AA18-4B30-99E1-6962DEA1A9A3}</td><td>SIMULATOR</td><td>2</td><td/><td>luamingsimulator.portrait.ex</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1078,8 +1089,11 @@
 		<row><td>INSTALLDIR</td><td>NewComponent2</td></row>
 		<row><td>INSTALLDIR</td><td>NewComponent3</td></row>
 		<row><td>INSTALLDIR</td><td>NewComponent4</td></row>
+		<row><td>LIB</td><td>ISX_DEFAULTCOMPONENT7</td></row>
 		<row><td>LUAFORWINDOWS</td><td>ISX_DEFAULTCOMPONENT3</td></row>
+		<row><td>RES</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>SIMULATOR</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>SSM1</td><td>ISX_DEFAULTCOMPONENT15</td></row>
 		<row><td>TEMPLATE</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 	</table>
 
@@ -1163,12 +1177,18 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S255">ISFolderName</col>
 		<row><td>ALLUSERSPROFILE</td><td>TARGETDIR</td><td>.:ALLUSE~1|All Users</td><td/><td>0</td><td/></row>
+		<row><td>ANDROIDSIMULATOR</td><td>INSTALLDIR</td><td>ANDROI~1|AndroidSimulator</td><td/><td>0</td><td/></row>
+		<row><td>ARMEABI</td><td>LIB</td><td>armeabi</td><td/><td>0</td><td/></row>
 		<row><td>ASSETS</td><td>TEMPLATE</td><td>assets</td><td/><td>0</td><td/></row>
 		<row><td>AdminToolsFolder</td><td>TARGETDIR</td><td>.:Admint~1|AdminTools</td><td/><td>0</td><td/></row>
 		<row><td>AppDataFolder</td><td>TARGETDIR</td><td>.:APPLIC~1|Application Data</td><td/><td>0</td><td/></row>
 		<row><td>CommonAppDataFolder</td><td>TARGETDIR</td><td>.:Common~1|CommonAppData</td><td/><td>0</td><td/></row>
 		<row><td>CommonFilesFolder</td><td>TARGETDIR</td><td>.:Common</td><td/><td>0</td><td/></row>
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>DRAWABLE_HDPI</td><td>RES</td><td>DRAWAB~1|drawable-hdpi</td><td/><td>0</td><td/></row>
+		<row><td>DRAWABLE_LDPI</td><td>RES</td><td>DRAWAB~1|drawable-ldpi</td><td/><td>0</td><td/></row>
+		<row><td>DRAWABLE_MDPI</td><td>RES</td><td>DRAWAB~1|drawable-mdpi</td><td/><td>0</td><td/></row>
+		<row><td>DRAWABLE_XHDPI</td><td>RES</td><td>DRAWAB~1|drawable-xhdpi</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
@@ -1178,10 +1198,12 @@
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
+		<row><td>LIB</td><td>LUAMINGANDROIDSIMULATOR</td><td>lib</td><td/><td>0</td><td/></row>
 		<row><td>LUAFORWINDOWS</td><td>INSTALLDIR</td><td>LUAFOR~1|LuaForWindows</td><td/><td>0</td><td/></row>
+		<row><td>LUAMINGANDROIDSIMULATOR</td><td>ANDROIDSIMULATOR</td><td>LUAMIN~1|LuamingAndroidSimulator</td><td/><td>0</td><td/></row>
 		<row><td>LUAMINGMANAGER</td><td>SSM</td><td>LUAMIN~1|LuamingManager</td><td/><td>0</td><td/></row>
 		<row><td>LUAMING_MANAGER</td><td>SSM</td><td>LUAMIN~1|Luaming Manager</td><td/><td>0</td><td/></row>
-		<row><td>LUAMING_MANAGER1</td><td>ProgramFilesFolder</td><td>LUAMIN~1|Luaming Manager</td><td/><td>0</td><td/></row>
+		<row><td>LUAMING_MANAGER1</td><td>SSM1</td><td>LUAMIN~1|Luaming Manager</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
 		<row><td>MY_PRODUCT_NAME</td><td>SSM</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
@@ -1193,9 +1215,11 @@
 		<row><td>PrintHoodFolder</td><td>TARGETDIR</td><td>.:PRINTH~1|PrintHood</td><td/><td>0</td><td/></row>
 		<row><td>ProgramFilesFolder</td><td>TARGETDIR</td><td>.:PROGRA~1|program files</td><td/><td>0</td><td/></row>
 		<row><td>ProgramMenuFolder</td><td>TARGETDIR</td><td>.:Programs</td><td/><td>3</td><td/></row>
+		<row><td>RES</td><td>LUAMINGANDROIDSIMULATOR</td><td>res</td><td/><td>0</td><td/></row>
 		<row><td>RecentFolder</td><td>TARGETDIR</td><td>.:Recent</td><td/><td>0</td><td/></row>
 		<row><td>SIMULATOR</td><td>INSTALLDIR</td><td>SIMULA~1|Simulator</td><td/><td>0</td><td/></row>
 		<row><td>SSM</td><td>ProgramFilesFolder</td><td>SSM</td><td/><td>0</td><td/></row>
+		<row><td>SSM1</td><td>ProgramFilesFolder</td><td>SSM</td><td/><td>0</td><td/></row>
 		<row><td>SendToFolder</td><td>TARGETDIR</td><td>.:SendTo</td><td/><td>3</td><td/></row>
 		<row><td>StartMenuFolder</td><td>TARGETDIR</td><td>.:STARTM~1|Start Menu</td><td/><td>3</td><td/></row>
 		<row><td>StartupFolder</td><td>TARGETDIR</td><td>.:StartUp</td><td/><td>3</td><td/></row>
@@ -1206,6 +1230,7 @@
 		<row><td>TempFolder</td><td>TARGETDIR</td><td>.:Temp</td><td/><td>0</td><td/></row>
 		<row><td>TemplateFolder</td><td>TARGETDIR</td><td>.:ShellNew</td><td/><td>0</td><td/></row>
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
+		<row><td>VALUES</td><td>RES</td><td>values</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
 		<row><td>luamin_1_luaming_manager</td><td>newfolder1</td><td>LUAMIN~1|Luaming Manager</td><td/><td>1</td><td/></row>
@@ -1903,9 +1928,20 @@
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT10</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT11</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT12</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT13</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT14</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT15</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT4</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT5</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT6</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT7</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT8</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>AlwaysInstall</td><td>LuaForWindows_v5.1.4_46.exe1</td></row>
 		<row><td>AlwaysInstall</td><td>LuamingManager.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>LuamingSimulator.Portrait.exe</td></row>
@@ -1940,8 +1976,11 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>android.jar</td><td>ISX_DEFAULTCOMPONENT5</td><td>android.jar</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\android.jar</td><td>1</td><td/></row>
+		<row><td>androidmanifest.xml</td><td>ISX_DEFAULTCOMPONENT5</td><td>ANDROI~1.XML|AndroidManifest.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\AndroidManifest.xml</td><td>1</td><td/></row>
 		<row><td>apidemo.lmg</td><td>ISX_DEFAULTCOMPONENT4</td><td>APIDemo.lmg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\APIDemo.lmg</td><td>1</td><td/></row>
 		<row><td>background.mp3</td><td>ISX_DEFAULTCOMPONENT2</td><td>BACKGR~1.MP3|background.mp3</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\background.mp3</td><td>1</td><td/></row>
+		<row><td>classes.dex</td><td>ISX_DEFAULTCOMPONENT6</td><td>classes.dex</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\classes.dex</td><td>1</td><td/></row>
 		<row><td>crop.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>crop.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\crop.png</td><td>1</td><td/></row>
 		<row><td>dog.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>dog.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\dog.png</td><td>1</td><td/></row>
 		<row><td>effect1.wav</td><td>ISX_DEFAULTCOMPONENT2</td><td>effect1.wav</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\effect1.wav</td><td>1</td><td/></row>
@@ -1949,11 +1988,16 @@
 		<row><td>glew32.dll</td><td>glew32.dll</td><td>glew32.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\glew32.dll</td><td>1</td><td/></row>
 		<row><td>hello.lua</td><td>ISX_DEFAULTCOMPONENT2</td><td>hello.lua</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\hello.lua</td><td>1</td><td/></row>
 		<row><td>icon.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>icon.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\Template\assets\icon.png</td><td>1</td><td/></row>
+		<row><td>icon.png1</td><td>ISX_DEFAULTCOMPONENT10</td><td>icon.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\res\drawable-hdpi\icon.png</td><td>1</td><td/></row>
+		<row><td>icon.png2</td><td>ISX_DEFAULTCOMPONENT11</td><td>icon.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\res\drawable-ldpi\icon.png</td><td>1</td><td/></row>
+		<row><td>icon.png3</td><td>ISX_DEFAULTCOMPONENT12</td><td>icon.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\res\drawable-mdpi\icon.png</td><td>1</td><td/></row>
+		<row><td>icon.png4</td><td>ISX_DEFAULTCOMPONENT13</td><td>icon.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\res\drawable-xhdpi\icon.png</td><td>1</td><td/></row>
 		<row><td>iconv.dll</td><td>iconv.dll</td><td>iconv.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\iconv.dll</td><td>1</td><td/></row>
 		<row><td>land.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>land.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\land.png</td><td>1</td><td/></row>
 		<row><td>libcocos2d.dll</td><td>libcocos2d.dll</td><td>LIBCOC~1.DLL|libcocos2d.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libcocos2d.dll</td><td>1</td><td/></row>
 		<row><td>libcocosdenshion.dll</td><td>libCocosDenshion.dll</td><td>LIBCOC~1.DLL|libCocosDenshion.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libCocosDenshion.dll</td><td>1</td><td/></row>
 		<row><td>libcurl.dll</td><td>libcurl.dll</td><td>libcurl.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libcurl.dll</td><td>1</td><td/></row>
+		<row><td>libgame.so</td><td>ISX_DEFAULTCOMPONENT8</td><td>libgame.so</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\lib\armeabi\libgame.so</td><td>1</td><td/></row>
 		<row><td>libtiff.dll</td><td>libtiff.dll</td><td>libtiff.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\libtiff.dll</td><td>1</td><td/></row>
 		<row><td>lua5.1.dll</td><td>lua5.1.dll</td><td>LUA51~1.DLL|lua5.1.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\lua5.1.dll</td><td>1</td><td/></row>
 		<row><td>lua51.dll</td><td>lua51.dll</td><td>lua51.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\lua51.dll</td><td>1</td><td/></row>
@@ -1967,7 +2011,9 @@
 		<row><td>menu2.png</td><td>ISX_DEFAULTCOMPONENT2</td><td>menu2.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Template\assets\menu2.png</td><td>1</td><td/></row>
 		<row><td>mozjs.dll</td><td>mozjs.dll</td><td>mozjs.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\mozjs.dll</td><td>1</td><td/></row>
 		<row><td>pthreadvce2.dll</td><td>pthreadVCE2.dll</td><td>PTHREA~1.DLL|pthreadVCE2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\pthreadVCE2.dll</td><td>1</td><td/></row>
+		<row><td>resources.arsc</td><td>ISX_DEFAULTCOMPONENT6</td><td>RESOUR~1.ARS|resources.arsc</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\resources.arsc</td><td>1</td><td/></row>
 		<row><td>sqlite3.dll</td><td>sqlite3.dll</td><td>sqlite3.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\sqlite3.dll</td><td>1</td><td/></row>
+		<row><td>strings.xml</td><td>ISX_DEFAULTCOMPONENT14</td><td>strings.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\LuamingManager\AndroidSimulator\LuamingAndroidSimulator\res\values\strings.xml</td><td>1</td><td/></row>
 		<row><td>zlib1.dll</td><td>zlib1.dll</td><td>zlib1.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\cocos2d-x\Build\bin\Release\Simulator\zlib1.dll</td><td>1</td><td/></row>
 	</table>
 
@@ -2230,9 +2276,20 @@
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_723AA55C_7DF6_4CBE_BCD3_F9EEE0EF2447_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_53F76A4B_9DEC_4608_A27B_07514C483B22_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_AC2372A9_117D_45B5_A47C_FEC88F7CEDF2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_406C469C_7AE0_4623_B894_ABAD1723A902_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_876BC553_5306_440E_B66B_BC4E85EFCC70_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_7463849C_C6EB_4FB1_BFF3_74062F507DDC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_F938E149_A956_41E2_A3A7_167EFAB28FA3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_4C79E2D9_034F_49E2_892D_6FDE6F674B57_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_9DEA6CEC_94A3_4988_8B72_F46A2EBFAF67_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_72B0AE01_0EC6_473E_95D1_183B3124AAD7_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_8C7FE801_9A5C_4812_A628_86700FAB8776_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_6C32AE11_8B59_4775_96AF_54F43F3E1D18_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_24B0F221_2477_49F2_9D06_2BE6EC94ABF5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_81C2BB1C_C434_4044_B4A9_29F4E4CB75B7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_2BF67EDA_76C8_4E98_B33A_70341B9AF411_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_19D8331F_39CE_4B38_9E59_4CB256074125_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LuaForWindows_v5.1.4_46.exe1</td><td/><td/><td>_6C6B14D8_56AB_42D4_8418_450CEA62374E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LuamingManager.Primary_output</td><td/><td/><td>_AFC4D302_CE88_470F_AEDF_80CF755B20EE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>LuamingSimulator.Portrait.exe</td><td/><td/><td>_7F89846C_AE1A_4AF8_8B3B_A14D524621D6_FILTER</td><td/><td/><td/><td/></row>
@@ -2600,8 +2657,8 @@
 		<col key="yes" def="s72">ISProductConfiguration_</col>
 		<col key="yes" def="s72">Property</col>
 		<col def="L255">Value</col>
-		<row><td>Express</td><td>MSIPackageFileName</td><td>LuamingManager_v1.0.1</td></row>
-		<row><td>Express</td><td>SetupFileName</td><td>LuamingManager_v1.0.1</td></row>
+		<row><td>Express</td><td>MSIPackageFileName</td><td>LuamingManager_v1.0.2</td></row>
+		<row><td>Express</td><td>SetupFileName</td><td>LuamingManager_v1.0.2</td></row>
 	</table>
 
 	<table name="ISRelease">
@@ -2884,7 +2941,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>614550177</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>1419837954</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
@@ -3999,8 +4056,8 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-1683943295</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>614564513</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>614576801</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://210.118.74.81/</td><td>0</td><td/><td>1419885058</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>SSM Luaming Team</td><td>0</td><td/><td>1419837954</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>LAUNCH~1.EXE|Launch LuamingSimulator.exe</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1683943295</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1147070812</td></row>
@@ -4638,9 +4695,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]LuamingManager.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{7A9510D6-2C82-467D-B2BC-0F70CEA67752}</td><td/></row>
+		<row><td>ProductCode</td><td>{8F5E7967-3625-41D5-AA89-16CAA9FE79B9}</td><td/></row>
 		<row><td>ProductName</td><td>Luaming Manager</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.1000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.2000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4928,7 +4985,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
-		<row><td>{A1BDE7C5-7936-402E-9682-CDF611832F7B}</td><td></td><td>1.00.1000</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>NewUpgradeEntry2</td></row>
+		<row><td>{A1BDE7C5-7936-402E-9682-CDF611832F7B}</td><td></td><td>1.00.2000</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>NewUpgradeEntry2</td></row>
 	</table>
 
 	<table name="Verb">
