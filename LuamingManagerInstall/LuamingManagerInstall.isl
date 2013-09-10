@@ -365,6 +365,7 @@
 		<row><td>NewComponent3</td><td>{5ED09FD1-033E-4D64-9A23-2C0D51B53A7E}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent4</td><td>{353F3896-50EF-4565-A038-FB028FCD1A1C}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent5</td><td>{31B90C90-78D1-4687-A09B-6FDFF7E1A962}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NewComponent6</td><td>{21D37383-065E-4F90-B095-8B047C6EA08D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>aapt.exe</td><td>{895D9E4B-7698-4008-8F58-F12801EEC4A4}</td><td>ANDROIDSIMULATOR</td><td>2</td><td/><td>aapt.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>glew32.dll</td><td>{B19E0A99-9500-4E06-96F2-8C0857672B87}</td><td>SIMULATOR</td><td>2</td><td/><td>glew32.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>iconv.dll</td><td>{B071F833-679F-42AB-949F-75439F2281CC}</td><td>SIMULATOR</td><td>2</td><td/><td>iconv.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1092,6 +1093,7 @@
 		<row><td>INSTALLDIR</td><td>NewComponent3</td></row>
 		<row><td>INSTALLDIR</td><td>NewComponent4</td></row>
 		<row><td>INSTALLDIR</td><td>NewComponent5</td></row>
+		<row><td>INSTALLDIR</td><td>NewComponent6</td></row>
 		<row><td>LIB</td><td>ISX_DEFAULTCOMPONENT7</td></row>
 		<row><td>LUAFORWINDOWS</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>RES</td><td>ISX_DEFAULTCOMPONENT9</td></row>
@@ -1954,6 +1956,7 @@
 		<row><td>AlwaysInstall</td><td>NewComponent3</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent4</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent5</td></row>
+		<row><td>AlwaysInstall</td><td>NewComponent6</td></row>
 		<row><td>AlwaysInstall</td><td>aapt.exe</td></row>
 		<row><td>AlwaysInstall</td><td>glew32.dll</td></row>
 		<row><td>AlwaysInstall</td><td>iconv.dll</td></row>
@@ -2306,6 +2309,7 @@
 		<row><td>NewComponent3</td><td/><td/><td>_177A198A_C5A7_4CCC_809B_06C37832D834_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent4</td><td/><td/><td>_00A76491_920D_411F_A4FE_40AAEBBC18B4_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent5</td><td/><td/><td>_3B25F887_D2E1_456B_B22B_60E06BFC19D1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NewComponent6</td><td/><td/><td>_94FC8F5E_D219_476C_9FAE_330444B7AE77_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>aapt.exe</td><td/><td/><td>_DC8921D0_7570_4256_9714_3A1E08E2DAAE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>glew32.dll</td><td/><td/><td>_28B732EC_ADEF_4766_94E0_8C8CB2294658_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>iconv.dll</td><td/><td/><td>_BADA882C_8674_4614_BE08_6CEBD8FB7484_FILTER</td><td/><td/><td/><td/></row>
@@ -2666,8 +2670,8 @@
 		<col key="yes" def="s72">ISProductConfiguration_</col>
 		<col key="yes" def="s72">Property</col>
 		<col def="L255">Value</col>
-		<row><td>Express</td><td>MSIPackageFileName</td><td>LuamingManager_v1.0.2</td></row>
-		<row><td>Express</td><td>SetupFileName</td><td>LuamingManager_v1.0.2</td></row>
+		<row><td>Express</td><td>MSIPackageFileName</td><td>LuamingManager_v1.0.3</td></row>
+		<row><td>Express</td><td>SetupFileName</td><td>LuamingManager_v1.0.3</td></row>
 	</table>
 
 	<table name="ISRelease">
@@ -4187,7 +4191,7 @@
 		<row><td>LuaForWindows_v5.1_F8380EB68CD74C11B704C076018F34AC.exe</td><td/><td>C:\Users\ssm\Downloads\LuaForWindows_v5.1.4-46.exe</td><td>0</td></row>
 		<row><td>LuamingSimulator.P_B3241973883C4398B2D21DC57B54023A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>LuamingSimulator.e_BE9049F5139E4771B9A47778A80A2E6D.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_L_1E7B0F68D0E04CE7887A363B9CF4F625.exe</td><td/><td>C:\Program Files\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>UNINST_Uninstall_L_AC6ABA80F6F8408AAA0D6F276E0EA43D.exe</td><td/><td>C:\Program Files\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 		<row><td>_Built1_C67DDE45E2C54508B1926A0D6D46C68D.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
 		<row><td>_Built1_E9D8DD1F99054B68B9B5288248A9F543.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
 		<row><td>_Built_479441D5090D498FB7C8E6CE0AC1E84D.exe</td><td/><td>D:\cocos2d-x\LuamingManager\LuamingManager\Images\app_button.ico</td><td>0</td></row>
@@ -4706,9 +4710,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]LuamingManager.Primary output</td><td/></row>
-		<row><td>ProductCode</td><td>{8F5E7967-3625-41D5-AA89-16CAA9FE79B9}</td><td/></row>
+		<row><td>ProductCode</td><td>{D7400A1C-5DBC-420F-A024-193AFE001B5A}</td><td/></row>
 		<row><td>ProductName</td><td>Luaming Manager</td><td/></row>
-		<row><td>ProductVersion</td><td>1.00.2000</td><td/></row>
+		<row><td>ProductVersion</td><td>1.00.3000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4786,7 +4790,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="i2">InstallMode</col>
 		<row><td>FileKey1</td><td>aapt.exe</td><td/><td>ssmlua_1_ssm_luaming_team</td><td>2</td></row>
 		<row><td>FileKey2</td><td>aapt.exe</td><td/><td>luamin_1_luaming_manager1</td><td>2</td></row>
-		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>NewComponent5</td><td/><td>luamin_1_luaming_manager</td><td>2</td></row>
+		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>NewComponent6</td><td/><td>luamin_1_luaming_manager</td><td>2</td></row>
 		<row><td>_Built</td><td>LuamingManager.Primary_output</td><td/><td>luamin_1_luaming_manager</td><td>2</td></row>
 	</table>
 
@@ -4873,7 +4877,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>luamin_1_luaming_manager</td><td>UNINST|Uninstall Luaming Manager</td><td>NewComponent5</td><td>[SystemFolder]msiexec.exe</td><td>/x {8F5E7967-3625-41D5-AA89-16CAA9FE79B9}</td><td/><td/><td>UNINST_Uninstall_L_1E7B0F68D0E04CE7887A363B9CF4F625.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>UNINST_Uninstall_Luaming_Manager</td><td>luamin_1_luaming_manager</td><td>UNINST|Uninstall Luaming Manager</td><td>NewComponent6</td><td>[SystemFolder]msiexec.exe</td><td>/x {D7400A1C-5DBC-420F-A024-193AFE001B5A}</td><td/><td/><td>UNINST_Uninstall_L_AC6ABA80F6F8408AAA0D6F276E0EA43D.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>_Built</td><td>luamin_1_luaming_manager</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>LuamingManager.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_949998C65CB9496E994325155889A0A7.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>LuamingManager.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built1_C67DDE45E2C54508B1926A0D6D46C68D.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
@@ -4998,7 +5002,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
 		<row><td>{00000000-0000-0000-0000-000000000000}</td><td>***ALL_VERSIONS***</td><td></td><td></td><td>2</td><td/><td>ISFOUNDNEWERPRODUCTVERSION</td><td>ISPreventDowngrade</td></row>
-		<row><td>{A1BDE7C5-7936-402E-9682-CDF611832F7B}</td><td></td><td>1.00.2000</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>NewUpgradeEntry2</td></row>
+		<row><td>{A1BDE7C5-7936-402E-9682-CDF611832F7B}</td><td></td><td>1.00.3000</td><td></td><td>768</td><td/><td>ISACTIONPROP2</td><td>NewUpgradeEntry2</td></row>
 	</table>
 
 	<table name="Verb">
